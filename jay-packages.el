@@ -1,1 +1,0 @@
-/Users/jay/Dropbox/emacs/spacemacs/private/jay/packages.el
