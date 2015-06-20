@@ -7,7 +7,7 @@
   (setq-default
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
-   dotspacemacs-configuration-layer-path '(~/Dropbox/emacs/spacemacs/private/jay/)
+   dotspacemacs-configuration-layer-path '("~/Dropbox/emacs/spacemacs/private/jay/")
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -21,9 +21,11 @@
      ;; (git :variables
       org
       osx
-      fun/xkcd
+      xkcd
       smex
-     ;; syntax-checking
+      emacs-lisp
+      shell
+      ;; syntax-checking
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -140,8 +142,13 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+
   (load "~/Dropbox/emacs/starship/starship.el")
 )
+(global-set-key (kbd "`") 'flyspell-auto-correct-word)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+
+
+

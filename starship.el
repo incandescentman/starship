@@ -164,7 +164,7 @@
 
 
 ;; and the keybinding
-(define-key org-mode-map (kbd "C-k") 'my/kill-line-dwim)
+;; (define-key org-mode-map (kbd "C-k") 'my/kill-line-dwim)
 
 
 ;; use OSX standard keybindings ⌘-up and ⌘-down to go to top or bottom of buffer
