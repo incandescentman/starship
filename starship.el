@@ -1,3 +1,243 @@
+(defun add-word-to-personal-dictionary ()
+  (interactive)
+  (let ((current-location (point))
+        (word (flyspell-get-word)))
+    (when (consp word)
+      (flyspell-do-correct 'save nil (car word) current-location (cadr word) (caddr word) current-location))))
+
+(add-hook 'org-mode-hook 'turn-on-flyspell)
+
+'(mouse-highlight nil)
+
+(setq confirm-kill-emacs 'yes-or-no-p) 
+
+(setq ring-bell-function
+      (lambda ()
+	(unless (memq this-command
+		      '(isearch-abort abort-recursive-edit exit-minibuffer keyboard-quit))
+	  (ding))))
+
+(setq ring-bell-function (lambda () (play-sound-file "~/sounds/InkSoundStroke3.mp3")))
+
+(setq sentence-end-double-space nil)
+
+(global-auto-revert-mode 1)
+
+(delete-selection-mode 1)
+
+(autopair-mode 1)
+
+
+(setq org-src-fontify-natively t)
+
+;; (add-to-list 'load-path (expand-file-name "~/git/org-mode/lisp"))
+
+(add-to-list 'auto-mode-alist '("\\.\\(org\\|org_archive\\|txt\\|txt_archive\\)$" . org-mode))
+
+(setq org-todo-keywords
+      '(
+        (sequence "TODO" "|" "DONE! :-)")
+        (sequence "DELEGATE" "DELEGATED" "|" "DONE! :-)")
+        (sequence "QUESTION" "|" "ANSWERED")
+        (sequence "QUESTIONS" "|" "ANSWERS")
+        (sequence "SOMEDAY/MAYBE" "|" "DONE! :-)")
+        (sequence "MAYBE" "|" "MAYBE NOT" "DONE! :-)")
+        (sequence "NEXT" "|" "DONE! :-)")
+        (sequence "DID NOT DO :-/" "STARTED" "|" "DONE! :-)") 
+        (sequence "STRATEGY" "|")
+(sequence "DONE" "|") 
+        (sequence "IF" "THEN" "|")
+        (sequence "GOAL" "PLAN" "|" "DONE! :-)")
+        ))
+
+(defvar new-buffer-count 0)
+(defun new-buffer ()
+  (interactive)
+  (setq new-buffer-count (+ new-buffer-count 1))
+  (switch-to-buffer (concat "buffer" (int-to-string new-buffer-count)))
+  (org-mode))
+(global-set-key (kbd "s-T") 'new-buffer)
+;; (define-key key-minor-mode-map "\s-\S-T" 'new-buffer)
+
+(defun org-new-scratch-buffer ()
+  (interactive)
+  (insert "* oh hi there! " (format-time-string "%F %l:%M%P\n\n"))
+  (org-tree-to-indirect-buffer 'current-window)
+  )
+
+(defun org-day ()
+  "foo"
+  (interactive)
+  (insert (format-time-string "[%H:%M]"))
+  )
+
+(defun jd-org-today ()
+  "insert a new heading with today's date"
+  (interactive)
+  (org-insert-subheading ())
+  (insert "accountability ")
+  (org-insert-time-stamp (current-time))
+  (insert " [0%]\n")
+  )
+
+(defun jd-clock-in ()
+  "insert a new heading with today's date, and then clock in"
+  (interactive)
+  (org-insert-subheading ())
+  (org-insert-time-stamp (current-time))
+  (org-clock-in)
+  (next-line)
+  (next-line)
+  )
+(defun endless/convert-punctuation (rg rp)
+  "Look for regexp RG around point, and replace with RP.
+Only applies to text-mode."
+  (let ((f "\\(%s\\)\\(%s\\)")
+        (space "?:[[:blank:]\n\r]*"))
+    ;; We obviously don't want to do this in prog-mode.
+    (if (and (derived-mode-p 'text-mode)
+             (or (looking-at (format f space rg))
+                 (looking-back (format f rg space))))
+        (replace-match rp nil nil nil 1))))
+
+(defun endless/capitalize ()
+  "Capitalize region or word.
+Also converts commas to full stops, and kills
+extraneous space at beginning of line."
+  (interactive)
+  (endless/convert-punctuation "," ".")
+  (if (use-region-p)
+      (call-interactively 'capitalize-region)
+    ;; A single space at the start of a line:
+    (when (looking-at "^\\s-\\b")
+      ;; get rid of it!
+      (delete-char 1))
+    (call-interactively 'capitalize-word)))
+
+(defun endless/downcase ()
+  "Downcase region or word.
+Also converts full stops to commas."
+  (interactive)
+  (endless/convert-punctuation "\\." ",")
+  (if (use-region-p)
+      (call-interactively 'downcase-region)
+    (call-interactively 'downcase-word)))
+
+(defun endless/upcase ()
+  "Upcase region or word."
+  (interactive)
+  (if (use-region-p)
+      (call-interactively 'upcase-region)
+    (call-interactively 'upcase-word)))
+
+(global-set-key "\M-c" 'endless/capitalize)
+(global-set-key "\M-l" 'endless/downcase)
+(global-set-key "\M-u" 'endless/upcase)
+
+
+
+(defun transpose-windows (arg)
+  "Transpose the buffers shown in two windows."
+  (interactive "p")
+  (let ((selector (if (>= arg 0) 'next-window 'previous-window)))
+    (while (/= arg 0)
+      (let ((this-win (window-buffer))
+	    (next-win (window-buffer (funcall selector))))
+	(set-window-buffer (selected-window) next-win)
+	(set-window-buffer (funcall selector) this-win)
+	(select-window (funcall selector)))
+      (setq arg (if (plusp arg) (1- arg) (1+ arg))))))
+
+(defun move-region-to-other-window (start end)
+  "Move selected text to other window"
+  (interactive "r")
+  (if (use-region-p) 
+      (let ((count (count-words-region start end)))
+        (save-excursion
+          (kill-region start end)
+          (other-window 1)   
+          (yank)
+          (newline))
+        (other-window -1)     
+        (message "Moved %s words" count))
+    (message "No region selected")))
+
+(require 'goto-chg)
+(global-set-key [(control ?.)] 'goto-last-change)
+(global-set-key [(control ?,)] 'goto-last-change-reverse)
+
+(defun remove-link ()
+    "Replace an org link by its description or if empty its address"
+  (interactive)
+  (if (org-in-regexp org-bracket-link-regexp 1)
+      (let ((remove (list (match-beginning 0) (match-end 0)))
+        (description (if (match-end 3) 
+                 (org-match-string-no-properties 3)
+                 (org-match-string-no-properties 1))))
+    (apply 'delete-region remove)
+    (insert description))))
+
+(defvar org-refile-region-format "\n%s\n")
+
+(defvar org-refile-region-position 'top
+  "Where to refile a region. Use 'bottom to refile at the
+end of the subtree. ")
+
+(defun org-refile-region (beg end copy)
+  "Refile the active region.
+If no region is active, refile the current paragraph.
+With prefix arg C-u, copy region instad of killing it."
+  (interactive "r\nP")
+  ;; mark paragraph if no region is set
+  (unless (use-region-p)
+    (setq beg (save-excursion
+                (backward-paragraph)
+                (skip-chars-forward "\n\t ")
+                (point))
+          end (save-excursion
+                (forward-paragraph)
+                (skip-chars-backward "\n\t ")
+                (point))))
+  (let* ((target (save-excursion (org-refile-get-location)))
+         (file (nth 1 target))
+         (pos (nth 3 target))
+         (text (buffer-substring-no-properties beg end)))
+    (unless copy (kill-region beg end))
+    (deactivate-mark)
+    (with-current-buffer (find-file-noselect file)
+      (save-excursion
+        (goto-char pos)
+        (if (eql refile-region-position 'bottom)
+            (org-end-of-subtree)
+          (org-end-of-meta-data-and-drawers))
+        (insert (format refile-region-format text))))))
+
+
+
+(defun visit-most-recent-file ()
+  "Visits the most recently open file in `recentf-list' that is not already being visited."
+  (interactive)
+  (let ((buffer-file-name-list (mapcar 'buffer-file-name (buffer-list)))
+	most-recent-filename)
+    (dolist (filename recentf-list)
+      (unless (memq filename buffer-file-name-list)
+	(setq most-recent-filename filename)
+	(return)))
+    (find-file most-recent-filename)))
+
+(defun path-copy-full-path-to-clipboard ()
+  "Copy the full current filename and path to the clipboard"
+  (interactive)
+  (let ((filename (if (equal major-mode 'dired-mode)
+                      default-directory
+                    (buffer-file-name))))
+    (when filename
+      (with-temp-buffer
+        (insert filename)
+        (clipboard-kill-region (point-min) (point-max)))
+      (message filename))))
+
+
 (set-terminal-coding-system 'utf-8)
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
@@ -404,22 +644,6 @@ provided the (transient) mark is active."
 
 
 
-  (setq-default ispell-program-name "hunspell")
-  (setq ispell-really-hunspell t)
-(setq flyspell-default-dictionary "en_US")
-
-(setq ispell-dictionary "en_US")
-;; (setq ispell-program-name "/usr/local/bin/hunspell") 
-(setenv "DICTIONARY" "en_US") 
-(if (file-exists-p "/usr/bin/hunspell")
-    (progn
-      (setq ispell-program-name "hunspell")
-      (eval-after-load "ispell"
-        '(progn (defun ispell-get-coding-system () 'utf-8))))) 
-
-(executable-find "hunspell")
-
-
 
 (defun cycle-hyphenation ()
   (interactive)
@@ -736,7 +960,6 @@ Subject: %^{Subject}
      (define-key org-mode-map (kbd "<M-right>") nil)
 (define-key org-mode-map (kbd "<S-up>") nil)
      (define-key org-mode-map (kbd "<S-down>") nil)
-
      (define-key org-mode-map [C-S-right] 'org-shiftmetaright)
      (define-key org-mode-map [C-S-left] 'org-shiftmetaleft)
      (define-key org-mode-map [C-right] 'org-metaright)
@@ -831,3 +1054,34 @@ Subject: %^{Subject}
 				    (replace-regexp-in-string home "~" path))
 				  recentf-list)
 			  nil t))))
+
+
+(setq auto-mode-alist (cons '("\\.txt" . org-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.msg" . message-mode) auto-mode-alist))
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.abbrev_defs\\'" . org-mode))
+(add-to-list 'auto-mode-alist '("README$" . org-mode))
+(add-hook 'emacs-lisp-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'css-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'html-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'html-helper-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'eshell-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'shell-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'shell-script-mode-hook (lambda () (abbrev-mode -1)))
+(add-hook 'term-mode-hook (lambda () (abbrev-mode -1)))
+(add-to-list 'auto-mode-alist '("COMMIT_EDITMSG$" . diff-mode))
+(add-to-list 'auto-mode-alist '("\\.css$" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\(on\\)?$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.xml$" . nxml-mode))
+
+(setq user-mail-address "dixit@aya.yale.edu")
+(setq user-full-name "Jay Dixit")
+
+(setq org-return-follows-link t)
+
+
+(define-hyper-key "L" 'org-mac-chrome-insert-frontmost-url)
+
+(setq org-support-shift-select (quote always))
