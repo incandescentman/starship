@@ -1085,3 +1085,5 @@ Subject: %^{Subject}
 (define-hyper-key "L" 'org-mac-chrome-insert-frontmost-url)
 
 (setq org-support-shift-select (quote always))
+
+(global-set-key (kbd "`") 'flyspell-auto-correct-word)
