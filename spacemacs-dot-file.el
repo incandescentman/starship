@@ -145,8 +145,13 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
-  (load "~/Dropbox/emacs/starship/starship.el")
-)
+(setq org-confirm-babel-evaluate nil)
+
+(org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
+
+(org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
+
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
