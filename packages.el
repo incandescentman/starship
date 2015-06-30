@@ -13,7 +13,7 @@
 (defvar jay-packages
   '(
     ;; package jays go here
-    magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup yasnippet xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe palimpsest olivetti org-mac-link org-mime
+    magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup yasnippet xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe palimpsest olivetti org-mac-link org-plus-contrib
     )
   "List of all packages to install and/or initialize. Built-in packages
 which require an initialization must be listed explicitly in the list.")
@@ -25,6 +25,7 @@ which require an initialization must be listed explicitly in the list.")
 ;;
 ;; (defun jay/init-my-package ()
 ;;   "Initialize my package"
+(defun jay/init-org-plus-contrib () (use-package org-plus-contrib))
 (defun jay/init-autopair () (use-package autopair))
 (defun jay/init-buffer-stack () (use-package buffer-stack))
 (defun jay/init-org-fstree () (use-package org-fstree))
