@@ -145,7 +145,14 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
-(setq org-confirm-babel-evaluate nil)
+  (setq vc-follow-symlinks t)
+(setq global-flyspell-mode t)
+
+  (setq org-confirm-babel-evaluate nil)
+(setq org-modules
+   (quote
+    (org-bbdb org-bibtex org-gnus org-info org-annotate-file org-bullets org-invoice org-mac-iCal org-mac-link org-panel org-secretary org-velocity org-mime org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-choose org-collector org-invoice)))
+
 
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
 

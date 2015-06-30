@@ -43,7 +43,7 @@ which require an initialization must be listed explicitly in the list.")
 (defun jay/init-palimpsest () (use-package palimpsest))
 (defun jay/init-olivetti () (use-package olivetti))
 (defun jay/init-org-mac-link () (use-package org-mac-link))
-(defun jay/init-org-mac-link () (use-package org-mime))
+(defun jay/init-org-mime () (use-package org-mime))
 
 
 ;;   )
