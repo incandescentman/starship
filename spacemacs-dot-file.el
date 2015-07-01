@@ -147,16 +147,26 @@ layers configuration."
 
   (setq vc-follow-symlinks t)
 (setq global-flyspell-mode t)
-
+(menu-bar-mode 1)
   (setq org-confirm-babel-evaluate nil)
-(setq org-modules
-   (quote
-    (org-bbdb org-bibtex org-gnus org-info org-annotate-file org-bullets org-invoice org-mac-iCal org-mac-link org-panel org-secretary org-velocity org-mime org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-choose org-collector org-invoice)))
+
+
+(setq default-frame-alist
+      '(
+        (width . 160) ; character
+        (height . 42) ; lines
+        ))
+
+;; (turn-on-olivetti-mode)
+
+(recenter-top-bottom)
 
 
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
 
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
+
+(load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
 
   )
 
