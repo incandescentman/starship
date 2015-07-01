@@ -151,6 +151,29 @@ layers configuration."
   (setq org-confirm-babel-evaluate nil)
 
 
+
+
+(setq default-frame-alist
+      '(
+        (width . 160) ; character
+        (height . 42) ; lines
+        ))
+
+;; (turn-on-olivetti-mode)
+
+(recenter-top-bottom)
+
+
+(org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
+
+(org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
+
+
+(load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
+
+  )
+
+
 ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
 ;; I've been wanting to do this for so long. :-)
 ;; this works correctly!!
@@ -173,25 +196,6 @@ layers configuration."
      ))
 
 
-
-(setq default-frame-alist
-      '(
-        (width . 160) ; character
-        (height . 42) ; lines
-        ))
-
-;; (turn-on-olivetti-mode)
-
-(recenter-top-bottom)
-
-
-(org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
-
-(org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
-
-(load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
-
-  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
