@@ -147,8 +147,31 @@ layers configuration."
 
   (setq vc-follow-symlinks t)
 (setq global-flyspell-mode t)
-(menu-bar-mode 1)
+;;(menu-bar-mode 1)
   (setq org-confirm-babel-evaluate nil)
+
+
+;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
+;; I've been wanting to do this for so long. :-)
+;; this works correctly!!
+(eval-after-load "org"
+  '(progn
+     (define-key org-mode-map (kbd "<M-S-left>") nil)
+     (define-key org-mode-map (kbd "<M-S-right>") nil)
+     (define-key org-mode-map (kbd "<M-S-up>") nil)
+     (define-key org-mode-map (kbd "<M-S-down>") nil)
+     (define-key org-mode-map (kbd "<M-left>") nil)
+     (define-key org-mode-map (kbd "<M-right>") nil)
+     (define-key org-mode-map (kbd "<M-right>") nil)
+     (define-key org-mode-map [C-S-right] 'org-shiftmetaright)
+     (define-key org-mode-map [C-S-left] 'org-shiftmetaleft)
+     (define-key org-mode-map [C-right] 'org-metaright)
+     (define-key org-mode-map [C-left] 'org-metaleft)
+     (define-key org-mode-map [C-up] 'org-metaup)
+     (define-key org-mode-map [C-down] 'org-metadown)
+     (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
+     ))
+
 
 
 (setq default-frame-alist
