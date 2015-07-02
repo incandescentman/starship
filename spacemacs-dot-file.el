@@ -156,7 +156,7 @@ layers configuration."
 
   (setq vc-follow-symlinks t)
 (setq global-flyspell-mode t)
-;;(menu-bar-mode 1)
+(menu-bar-mode 1)
   (setq org-confirm-babel-evaluate nil)
 
 
@@ -203,7 +203,6 @@ layers configuration."
      (define-key org-mode-map [C-down] 'org-metadown)
      (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
      ))
-
 
 
 ;; Do not write anything past this comment. This is where Emacs will
