@@ -28,7 +28,6 @@
       markdown
       git
       github
-      gitter
       ;;      version-control
       latex
       fasd
@@ -173,15 +172,12 @@ layers configuration."
 
 ;; (turn-on-olivetti-mode)
 
-(recenter-top-bottom)
-
 
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
-
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
 
-
 (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
+(load "/Users/jay/gnulisp/book-functions.el")
 
   )
 
@@ -214,6 +210,9 @@ layers configuration."
 ;; Maybe you need to do (add-hook ... t) to ensure that your function is inserted into the hook after spacemacs//ido-setup (otherwise it will undo your work when it is run). 
 
 (setq helm-echo-input-in-header-line nil) 
+
+(recenter-top-bottom)
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
