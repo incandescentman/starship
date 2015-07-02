@@ -26,8 +26,10 @@
       emacs-lisp
       shell
       markdown
-
-git
+      git
+      github
+      version-control
+      latex
       fasd
       html
       latex
