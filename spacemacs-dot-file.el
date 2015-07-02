@@ -207,6 +207,8 @@ layers configuration."
      ))
 
 
+(setq helm-echo-input-in-header-line nil) 
+
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 
