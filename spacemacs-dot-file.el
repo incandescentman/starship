@@ -25,6 +25,15 @@
       smex
       emacs-lisp
       shell
+      markdown
+
+git
+      fasd
+      html
+      latex
+shell
+     shell-scripts
+     smex 
       ;; syntax-checking
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
