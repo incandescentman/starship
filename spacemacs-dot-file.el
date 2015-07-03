@@ -35,7 +35,9 @@
       latex
       shell
       shell-scripts
-      smex 
+      smex
+      spotify
+      chrome
       ;; syntax-checking
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -157,12 +159,9 @@ before layers configuration."
 layers configuration."
 
   (setq vc-follow-symlinks t)
-(setq global-flyspell-mode t)
-(menu-bar-mode 1)
+  (setq global-flyspell-mode t)
+  (menu-bar-mode 1)
   (setq org-confirm-babel-evaluate nil)
-
-
-
 
 (setq default-frame-alist
       '(
@@ -171,7 +170,6 @@ layers configuration."
         ))
 
 ;; (turn-on-olivetti-mode)
-
 
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
@@ -204,15 +202,14 @@ layers configuration."
      ))
 
 (add-hook 'ido-setup-hook (lambda () (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
-    (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
-)) 
+                            (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
+                            )) 
 
 ;; Maybe you need to do (add-hook ... t) to ensure that your function is inserted into the hook after spacemacs//ido-setup (otherwise it will undo your work when it is run). 
 
 (setq helm-echo-input-in-header-line nil) 
 
 (recenter-top-bottom)
-
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
