@@ -173,6 +173,8 @@ layers configuration."
 
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
 (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
+(org-babel-load-file "~/Dropbox/emacs/prelude/personal/appearance-jay-custom-functions.org")
+
 
 (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
 (load "/Users/jay/gnulisp/book-functions.el")
