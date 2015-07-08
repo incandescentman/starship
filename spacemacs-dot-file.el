@@ -24,21 +24,18 @@
       xkcd
       smex
       emacs-lisp
-      shell
-      markdown
-      git
-      github
+   ;;      markdown
+;;      git
+;;      github
       gnus
       ;;      version-control
-      latex
-      fasd
-      html
-      latex
-      shell
+ ;;     latex
+ ;;     fasd
+ ;;     html
+         shell
       shell-scripts
-      smex
-      spotify
-      chrome
+   ;;      spotify
+   ;;   chrome
       ;; syntax-checking
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
