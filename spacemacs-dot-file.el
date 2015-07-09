@@ -25,8 +25,8 @@
       smex
       emacs-lisp
    ;;      markdown
-;;      git
-;;      github
+git
+github
       gnus
       ;;      version-control
  ;;     latex
