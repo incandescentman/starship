@@ -291,6 +291,7 @@ layers configuration."
  '(message-draft-headers (quote (From References Date)))
  '(message-kill-buffer-on-exit t)
  '(message-required-headers (quote (From (optional . References))))
+ '(message-send-mail-function (quote message-send-mail-with-sendmail))
  '(mml-default-directory
    "~/Dropbox/writing/notationaldata/emacs-mail-message-mode-messages")
  '(openwith-associations
@@ -462,11 +463,12 @@ layers configuration."
  '(ring-bell-function (quote ignore) t)
  '(safe-local-variable-values
    (quote
-    ((eval when
+    ((org-hide-emphasis-markers)
+     (eval when
            (fboundp
             (quote rainbow-mode))
            (rainbow-mode 1)))))
- '(send-mail-function (quote smtpmail-send-it))
+ '(send-mail-function (quote sendmail-send-it))
  '(smex-prompt-string "I love you. ")
  '(standard-indent 3)
  '(tooltip-mode nil)
