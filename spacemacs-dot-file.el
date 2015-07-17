@@ -204,6 +204,11 @@ layers configuration."
      (define-key org-mode-map [C-up] 'org-metaup)
      (define-key org-mode-map [C-down] 'org-metadown)
      (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
+          ;; add these new ones below
+     (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
+     (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
+;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
+
      ))
 
 (add-hook 'ido-setup-hook (lambda () (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
