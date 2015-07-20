@@ -16,30 +16,30 @@
      ;; Example of useful layers you may want to use right away
      ;; Uncomment a layer name and press C-c C-c to install it
      ;; --------------------------------------------------------
-      auto-completion
+     auto-completion
      ;; better-defaults
      ;; (git :variables
-      org
-;;      osx
-;;      xkcd
-smex
-      emacs-lisp
-   ;;      markdown
-git
-github
-      gnus
-      ;;      version-control
- ;;     latex
- ;;     fasd
- ;;     html
-         shell
-      shell-scripts
-   ;;      spotify
-   ;;   chrome
-      ;; syntax-checking
+     org
+     ;;      osx
+     ;;      xkcd
+     smex
+     emacs-lisp
+     ;;      markdown
+     ;; git
+     ;; github
+     gnus
+     ;;      version-control
+     ;;     latex
+     ;;     fasd
+     ;;     html
+     shell
+     shell-scripts
+     ;;      spotify
+     ;;   chrome
+     ;; syntax-checking
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(vi-tilde-fringe)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'
@@ -157,30 +157,30 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
 
-(require 'package)
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) 
-(package-initialize)
+  (require 'package)
+  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) 
+  (package-initialize)
 
   (setq vc-follow-symlinks t)
   (setq global-flyspell-mode t)
   (menu-bar-mode 1)
   (setq org-confirm-babel-evaluate nil)
 
-(setq default-frame-alist
-      '(
-        (width . 160) ; character
-        (height . 42) ; lines
-        ))
+  (setq default-frame-alist
+        '(
+          (width . 160) ; character
+          (height . 42) ; lines
+          ))
 
-;; (turn-on-olivetti-mode)
+  ;; (turn-on-olivetti-mode)
 
-(org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
-(org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
-(org-babel-load-file "~/Dropbox/emacs/prelude/personal/appearance-jay-custom-functions.org")
+  (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
+  (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
+  (org-babel-load-file "~/Dropbox/emacs/prelude/personal/appearance-jay-custom-functions.org")
 
 
-(load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
-(load "/Users/jay/gnulisp/book-functions.el")
+  (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
+  (load "/Users/jay/gnulisp/book-functions.el")
 
   )
 
@@ -204,10 +204,10 @@ layers configuration."
      (define-key org-mode-map [C-up] 'org-metaup)
      (define-key org-mode-map [C-down] 'org-metadown)
      (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
-          ;; add these new ones below
+     ;; add these new ones below
      (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
      (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
-;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
+     ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
 
      ))
 
@@ -223,8 +223,8 @@ layers configuration."
           #'(lambda () (setq helm-echo-input-in-header-line nil))) 
 
 (setq org-agenda-files
-   (quote
-    ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
+      (quote
+       ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
 
 
 (setq org-bullets-bullet-list '("◉" "○" "✸" "✿"))

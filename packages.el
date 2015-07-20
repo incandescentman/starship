@@ -26,7 +26,7 @@ which require an initialization must be listed explicitly in the list."
 '(
 
   ;; "List of packages to exclude." 
-adaptive-wrap
+adaptive-wrap 
   ))
 
 ;; For each package, define a function jay/init-<package-jay>
