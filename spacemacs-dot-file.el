@@ -229,6 +229,10 @@ layers configuration."
 
 (setq org-bullets-bullet-list '("◉" "○" "✸" "✿"))
 
+(load "/Users/jay/Dropbox/emacs/prelude/personal/gnugol.el")
+(require 'gnugol)
+
+
 (recenter-top-bottom)
 
 ;; Do not write anything past this comment. This is where Emacs will
