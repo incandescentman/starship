@@ -20,9 +20,9 @@
      ;; better-defaults
      ;; (git :variables
       org
-      osx
-      xkcd
-      smex
+;;      osx
+;;      xkcd
+smex
       emacs-lisp
    ;;      markdown
 git
@@ -316,6 +316,9 @@ layers configuration."
       (file)))))
  '(org-M-RET-may-split-line (quote ((item . t))))
  '(org-activate-links (quote (bracket plain radio tag date footnote)))
+ '(org-agenda-files
+   (quote
+    ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
  '(org-agenda-jump-prefer-future t)
  '(org-agenda-skip-scheduled-if-done t)
  '(org-agenda-timegrid-use-ampm t)
@@ -472,8 +475,28 @@ layers configuration."
  '(ring-bell-function (quote ignore) t)
  '(safe-local-variable-values
    (quote
-    ((buffer-file-coding-system . utf-8-unix)
-     (org-html-head-include-scripts)
+    ((org-export-latex-preamble . "\\documentclass[ngerman]{article}
+\\usepackage[T1]{fontenc}
+\\usepackage[utf8]{inputenc}
+\\usepackage{verbatim}
+%% No necesito \\url porque uso hyperref (\\href)
+%% \\IfFileExists{url.sty}{\\usepackage{url}}
+%%                       {\\newcommand{\\url}{\\texttt}}
+\\usepackage[authoryear]{natbib}
+\\usepackage{ae}
+
+\\makeatletter
+\\providecommand{\\LyX}{L\\kern-.1667em\\lower.25em\\hbox{Y}\\kern-.125emX\\@}
+
+\\usepackage{bibgerm}
+
+\\usepackage{babel}
+\\makeatother
+
+\\usepackage[breaklinks=true]{hyperref}
+\\usepackage{breakurl}
+\\usepackage{array}
+")
      (eval when
            (fboundp
             (quote rainbow-mode))

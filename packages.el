@@ -16,7 +16,7 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup yasnippet xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe palimpsest olivetti org-mac-link org-plus-contrib recentf writeroom-mode key-chord recent-addresses helm-cmd-t gnorb w3m multiple-cursors xah-replace-pairs org-download
+magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup yasnippet xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe palimpsest olivetti org-mac-link org-plus-contrib recentf writeroom-mode key-chord recent-addresses helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download
 )) 
 
   "List of all packages to install and/or initialize. Built-in packages
@@ -62,7 +62,7 @@ adaptive-wrap
 
 (defun jay/init-w3m () (use-package w3m))
 
-(defun jay/init-gnorb () (use-package gnorb))
+
 (defun jay/init-multiple-cursors () (use-package multiple-cursors))
 
 (defun jay/init-xah-replace-pairs () (use-package xah-replace-pairs))
