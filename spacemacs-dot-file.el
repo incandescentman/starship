@@ -209,9 +209,10 @@ layers configuration."
      ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
 ))
 
-(add-hook 'ido-setup-hook (lambda () (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
+(add-hook 'ido-setup-hook (lambda ()
+                            (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
                             (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
-                            )) 
+                            ))
 
 (setq helm-echo-input-in-header-line nil) 
 
