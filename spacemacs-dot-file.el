@@ -73,7 +73,8 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-light
+   dotspacemacs-themes '(leuven
+                         spacemacs-light
                          spacemacs-dark
                          solarized-light 
                          solarized-dark
@@ -172,7 +173,9 @@ layers configuration."
           (height . 42) ; lines
           ))
 
-  ;; (turn-on-olivetti-mode)
+(custom-set-faces 
+'(org-link ((t (:underline nil)))))
+
 
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
@@ -181,9 +184,6 @@ layers configuration."
 
   (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
   (load "/Users/jay/gnulisp/book-functions.el")
-
-  )
-
 
 ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
 ;; I've been wanting to do this for so long. :-)
@@ -204,18 +204,14 @@ layers configuration."
      (define-key org-mode-map [C-up] 'org-metaup)
      (define-key org-mode-map [C-down] 'org-metadown)
      (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
-     ;; add these new ones below
      (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
      (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
      ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
-
-     ))
+))
 
 (add-hook 'ido-setup-hook (lambda () (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
                             (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
                             )) 
-
-;; Maybe you need to do (add-hook ... t) to ensure that your function is inserted into the hook after spacemacs//ido-setup (otherwise it will undo your work when it is run). 
 
 (setq helm-echo-input-in-header-line nil) 
 
@@ -226,14 +222,15 @@ layers configuration."
       (quote
        ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
 
-
 (setq org-bullets-bullet-list '("◉" "○" "✸" "✿"))
 
 (load "/Users/jay/Dropbox/emacs/prelude/personal/gnugol.el")
 (require 'gnugol)
-
+(require 'reveal-in-finder)
 
 (recenter-top-bottom)
+
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
@@ -378,7 +375,7 @@ layers configuration."
  '(org-footnote-define-inline t)
  '(org-footnote-section "Footnotes")
  '(org-footnote-tag-for-non-org-mode-files "Footnotes:")
- '(org-headline-done ((t (:strike-through t))))
+ '(org-headline-done ((t (:strike-through to))))
  '(org-hidden-keywords (quote (author title)) nil nil "#+BEGIN_QUOTE")
  '(org-hide-block-startup nil)
  '(org-hide-emphasis-markers t)
@@ -479,29 +476,7 @@ layers configuration."
  '(ring-bell-function (quote ignore) t)
  '(safe-local-variable-values
    (quote
-    ((org-export-latex-preamble . "\\documentclass[ngerman]{article}
-\\usepackage[T1]{fontenc}
-\\usepackage[utf8]{inputenc}
-\\usepackage{verbatim}
-%% No necesito \\url porque uso hyperref (\\href)
-%% \\IfFileExists{url.sty}{\\usepackage{url}}
-%%                       {\\newcommand{\\url}{\\texttt}}
-\\usepackage[authoryear]{natbib}
-\\usepackage{ae}
-
-\\makeatletter
-\\providecommand{\\LyX}{L\\kern-.1667em\\lower.25em\\hbox{Y}\\kern-.125emX\\@}
-
-\\usepackage{bibgerm}
-
-\\usepackage{babel}
-\\makeatother
-
-\\usepackage[breaklinks=true]{hyperref}
-\\usepackage{breakurl}
-\\usepackage{array}
-")
-     (eval when
+    ((eval when
            (fboundp
             (quote rainbow-mode))
            (rainbow-mode 1)))))
@@ -521,4 +496,5 @@ layers configuration."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
- '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
+ '(org-link ((t (:underline nil)))))
