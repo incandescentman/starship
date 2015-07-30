@@ -176,11 +176,13 @@ layers configuration."
 (custom-set-faces 
 '(org-link ((t (:underline nil)))))
 
+;; enable python
+(org-babel-do-load-languages 'org-babel-load-languages '((python . t)))
 
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/appearance-jay-custom-functions.org")
-
+(load "/Users/jay/Dropbox/emacs/prelude/core/prelude-core.el")
 
   (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
   (load "/Users/jay/gnulisp/book-functions.el")
@@ -214,6 +216,8 @@ layers configuration."
                             (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
                             ))
 
+(define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
+
 (setq helm-echo-input-in-header-line nil) 
 
 (add-hook 'helm-after-initialize-hook
@@ -230,9 +234,12 @@ layers configuration."
 (require 'reveal-in-finder)
 
 (recenter-top-bottom)
+(setq case-fold-search t)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 )
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
@@ -483,6 +490,7 @@ layers configuration."
            (rainbow-mode 1)))))
  '(send-mail-function (quote sendmail-send-it))
  '(smex-prompt-string "I love you. ")
+ '(spacemacs-show-trailing-whitespace nil)
  '(standard-indent 3)
  '(tooltip-mode nil)
  '(tramp-default-method "ssh")
