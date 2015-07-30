@@ -176,6 +176,9 @@ layers configuration."
 (custom-set-faces 
 '(org-link ((t (:underline nil)))))
 
+;; automatically display any prefix
+(setq guide-key/recursive-key-sequence-flag t)
+
 ;; enable python
 (org-babel-do-load-languages 'org-babel-load-languages '((python . t)))
 
@@ -210,6 +213,8 @@ layers configuration."
      (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
      ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
 ))
+
+(smartparens-global-mode 1)
 
 (add-hook 'ido-setup-hook (lambda ()
                             (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
@@ -248,6 +253,7 @@ layers configuration."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(abbrev-all-caps nil)
+ '(abbrev-file-name "/Users/jay/elisp/.abbrev_defs")
  '(ac-auto-show-menu 2.0)
  '(ac-auto-start 4)
  '(ac-candidate-menu-min 3)
@@ -256,6 +262,11 @@ layers configuration."
  '(ahs-idle-interval 0.25)
  '(ahs-idle-timer 0 t)
  '(ahs-inhibit-face-list nil)
+ '(ansi-color-names-vector
+   ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
+ '(auto-save-visited-file-name t)
+ '(autopair-blink t)
+ '(autopair-global-mode nil)
  '(blink-cursor-mode nil)
  '(buffer-stack-show-position nil)
  '(buffer-stack-untracked
@@ -273,34 +284,51 @@ layers configuration."
  '(cua-highlight-region-shift-only t)
  '(cua-mode nil nil (cua-base))
  '(cursor-type (quote box))
+ '(custom-safe-themes
+   (quote
+    ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
  '(debug-on-error t)
  '(deft-directory "~/Dropbox/writing/notationaldata/")
+ '(deft-text-mode (quote org-mode))
  '(delete-window-preserve-buffer
    (quote
     ("*scratch*" "current-book-research.txt" "accountability.txt")))
  '(dired-clean-up-buffers-too nil)
  '(dired-details-hidden-string "")
  '(dired-kept-versions 8)
+ '(dired-sort-menu-invalid-options-remote nil)
  '(display-time-mode t)
  '(edit-server-default-major-mode (quote org-mode))
  '(edit-server-new-frame t)
  '(eshell-load-hook (quote ((lambda nil (abbrev-mode -1)))))
+ '(fci-rule-color "#383838" t)
  '(flyspell-abbrev-p t)
+ '(flyspell-mark-duplications-exceptions
+   (quote
+    ((nil "that" "had" "ha" "something" "blah" "yada ")
+     ("\\`francais" "nous" "vous"))))
  '(flyspell-use-global-abbrev-table-p t)
+ '(fringe-mode 0 nil (fringe))
  '(global-flyspell-mode t t)
+ '(gmm/auto-mode-list
+   (quote
+    ("[\\\\/]mail-google-com.*\\.\\(ckr\\|gmm\\|html?\\|txt\\)\\'" "[\\\\/]itsalltext[\\\\/]mail\\.google\\..*\\.txt\\'")))
  '(grep-find-ignored-directories
    (quote
     ("SCCS" "RCS" "CVS" "MCVS" ".svn" ".git" ".hg" ".bzr" "_MTN" "_darcs" "{arch}" "devonthink")))
  '(grep-find-ignored-files
    (quote
-    (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.pfsl" "*.dfsl" "*.p64fsl" "*.d64fsl" "*.dx64fsl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "*.pdf" "*.tex" "*.html" "*.mm" "*.js" "*.doc" "*.docx" "*.xls" "*.jpg" "*.png" "*.xlsx" "*devonthink*" "*.gif" "Icon*" "*fontification*" "*helm*" "*750words*")))
+    (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.pfsl" "*.dfsl" "*.p64fsl" "*.d64fsl" "*.dx64fsl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "*.pdf" "*.tex" "*.html" "*.mm" "*.js" "*.doc" "*.pdf" "*.docx" "*.xls" "*.jpg" "*.png" "*.xlsx" "*devonthink*" "*.gif" "Icon*")))
  '(grep-highlight-matches (quote always))
+ '(helm-ff-smart-completion t)
+ '(htmlize-output-type (quote inline-css))
  '(ido-ignore-files
    (quote
     ("\\`CVS/" "\\`#" "\\`.#" "\\`\\.\\./" "\\`\\./" "pdf" "tex" "html" ".mm" "Icon*")))
  '(ido-save-directory-list-file "~/Dropbox/emacs/prelude/personal/.savefile/ido.hist")
  '(ido-use-faces t)
  '(ido-use-url-at-point t)
+ '(inhibit-startup-screen t)
  '(initial-buffer-choice "~/Dropbox/writing/notationaldata/playful.org")
  '(initial-major-mode (quote org-mode))
  '(mail-default-directory
@@ -313,6 +341,9 @@ layers configuration."
  '(message-send-mail-function (quote message-send-mail-with-sendmail))
  '(mml-default-directory
    "~/Dropbox/writing/notationaldata/emacs-mail-message-mode-messages")
+ '(mouse-highlight nil)
+ '(olivetti-body-width 100)
+ '(only-global-abbrevs t)
  '(openwith-associations
    (quote
     (("\\.pdf\\'" "open"
@@ -325,17 +356,32 @@ layers configuration."
       (file)))))
  '(org-M-RET-may-split-line (quote ((item . t))))
  '(org-activate-links (quote (bracket plain radio tag date footnote)))
+ '(org-agenda-export-html-style
+   "<link rel=\"stylesheet\" type=\"text/css\" href=\"http://dixit.ca/css/email.css\" />")
  '(org-agenda-files
    (quote
-    ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
+    ("~/Dropbox/writing/notationaldata/accountability.org")))
  '(org-agenda-jump-prefer-future t)
+ '(org-agenda-prefix-format
+   (quote
+    ((agenda . " %-12:c%?-12t% s")
+     (timeline . "  % s")
+     (todo . " %i %-12:c")
+     (tags . " %i %-12:c")
+     (search . " %i %-12:c"))))
  '(org-agenda-skip-scheduled-if-done t)
  '(org-agenda-timegrid-use-ampm t)
  '(org-archive-location "archive/%s_archive::")
  '(org-ascii-headline-spacing (quote (1 . 1)))
  '(org-ascii-table-use-ascii-art t)
- '(org-bullets-face-name (quote \"Courier\"))
- '(org-catch-invisible-edits (quote error))
+ '(org-ascii-underline
+   (quote
+    ((ascii 61 45 45)
+     (latin1 61 45 45)
+     (utf-8 9552 9472 9548 9476 9480))))
+ '(org-bullets-bullet-list (quote (" ")))
+ '(org-bullets-face-name (quote \"Lucida\ Sans\ Typeriter\"))
+ '(org-catch-invisible-edits (quote smart))
  '(org-clock-auto-clock-resolution t)
  '(org-clock-idle-time 5)
  '(org-clock-in-resume t)
@@ -345,22 +391,30 @@ layers configuration."
    (quote
     (:maxlevel 3 :lang "en" :scope file :block nil :wstart 1 :mstart 1 :tstart nil :tend nil :step nil :stepskip0 nil :fileskip0 nil :tags nil :emphasize nil :link nil :narrow 40! :indent t :formula nil :timestamp nil :level nil :tcolumns nil :formatter nil)))
  '(org-closed-string "COMPLETED:")
+ '(org-confirm-babel-evaluate nil)
  '(org-ctrl-k-protect-subtree t)
  '(org-custom-properties (quote (">")))
  '(org-default-notes-file "~/Dropbox/writing/notationaldata/notes.txt")
  '(org-display-custom-times nil)
  '(org-drawers (quote ("PROPERTIES" "CLOCK" "LOGBOOK" "RESULTS" "SOURCE")))
+ '(org-drill-optimal-factor-matrix
+   (quote
+    ((1
+      (2.5 . 4.0)
+      (1.7000000000000002 . 3.44)
+      (1.96 . 3.58)
+      (2.6 . 4.14)))))
  '(org-edit-src-content-indentation 4)
  '(org-ellipsis (quote org-warning))
  '(org-enable-fixed-width-editor nil)
  '(org-enforce-todo-checkbox-dependencies t)
  '(org-enforce-todo-dependencies t)
  '(org-export-allow-bind-keywords t)
- '(org-export-blocks-witheld (quote (hidden)))
+ '(org-export-blocks-witheld (quote (hidden)) t)
  '(org-export-date-timestamp-format "%Y%m%d %I:%M%p")
- '(org-export-html-inline-image-extensions (quote ("png" "jpeg" "jpg" "gif" "svg" "tif" "gif")))
- '(org-export-html-style-include-default t)
- '(org-export-latex-date-format "%d %B %Y.")
+ '(org-export-html-inline-image-extensions (quote ("png" "jpeg" "jpg" "gif" "svg" "tif" "gif")) t)
+ '(org-export-html-style-include-default t t)
+ '(org-export-latex-date-format "%d %B %Y." t)
  '(org-export-latex-emphasis-alist
    (quote
     (("*" "\\emph{%s}" nil)
@@ -368,14 +422,15 @@ layers configuration."
      ("_" "\\underline{%s}" nil)
      ("+" "\\st{%s}" nil)
      ("=" "\\verb" t)
-     ("~" "\\verb" t))))
+     ("~" "\\verb" t))) t)
  '(org-export-latex-image-default-option "width=20.5cm")
- '(org-export-latex-verbatim-wrap (quote ("\\begin{quote}" . "\\end{quote}")))
+ '(org-export-latex-verbatim-wrap (quote ("\\begin{quote}" . "\\end{quote}")) t)
  '(org-export-preserve-breaks t)
  '(org-export-time-stamp-file nil)
  '(org-export-with-clocks t)
  '(org-export-with-drawers t)
  '(org-export-with-section-numbers nil)
+ '(org-export-with-timestamps (quote active))
  '(org-export-with-toc nil)
  '(org-extend-today-until 8)
  '(org-fontify-done-headline t)
@@ -383,7 +438,7 @@ layers configuration."
  '(org-footnote-define-inline t)
  '(org-footnote-section "Footnotes")
  '(org-footnote-tag-for-non-org-mode-files "Footnotes:")
- '(org-headline-done ((t (:strike-through to))))
+ '(org-headline-done ((t (:strike-through t))))
  '(org-hidden-keywords (quote (author title)) nil nil "#+BEGIN_QUOTE")
  '(org-hide-block-startup nil)
  '(org-hide-emphasis-markers t)
@@ -396,9 +451,12 @@ layers configuration."
 %s
 </div>
 </div>")
+ '(org-html-head
+   "<link rel='stylesheet' type='text/css' href='http://dixit.ca/css/email.css' />")
  '(org-html-head-include-default-style nil)
  '(org-html-head-include-scripts nil)
  '(org-html-html5-fancy t)
+ '(org-html-metadata-timestamp-format "%m-%d %a %H:%M")
  '(org-html-postamble nil)
  '(org-html-text-markup-alist
    (quote
@@ -409,10 +467,28 @@ layers configuration."
      (underline . "<span class=\"underline\">%s</span>")
      (verbatim . "<code>%s</code>"))))
  '(org-html-toplevel-hlevel 2)
+ '(org-icalendar-alarm-time 15)
+ '(org-icalendar-categories (quote (local-tags todo-state)))
+ '(org-icalendar-exclude-tags (quote ("noexport" "ARCHIVE")))
+ '(org-icalendar-store-UID t)
+ '(org-icalendar-use-deadline (quote (todo-due)))
+ '(org-icalendar-use-scheduled (quote (event-if-todo)))
  '(org-indent-indentation-per-level 2)
  '(org-indent-mode-turns-off-org-adapt-indentation nil)
  '(org-indent-mode-turns-on-hiding-stars nil)
  '(org-insert-mode-line-in-empty-file t)
+ '(org-koma-letter-author "Jay Dixit")
+ '(org-koma-letter-closing "Best,")
+ '(org-koma-letter-email "jay@jaydixit.com")
+ '(org-koma-letter-from-address "22 Saint Marks Place Apt. D \\ New York NY 10003-8076")
+ '(org-koma-letter-phone-number "(646) 355-8001")
+ '(org-koma-letter-place "New York City")
+ '(org-koma-letter-use-backaddress nil)
+ '(org-koma-letter-use-email t)
+ '(org-koma-letter-use-foldmarks "nil")
+ '(org-koma-letter-use-phone t)
+ '(org-latex-active-timestamp-format "\\textrm{%s}")
+ '(org-latex-inactive-timestamp-format "\\textrm{%s}")
  '(org-latex-text-markup-alist
    (quote
     ((bold . "\\textbf{%s}")
@@ -460,6 +536,9 @@ layers configuration."
  '(org-startup-folded nil)
  '(org-startup-indented t)
  '(org-support-shift-select (quote always))
+ '(org-time-clocksum-format
+   (quote
+    (:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t)))
  '(org-time-clocksum-use-effort-durations t)
  '(org-time-stamp-custom-formats (quote ("<%a %b %d>" . "<%m/%d %a %I:%M%p>")))
  '(org-use-speed-commands t)
@@ -482,28 +561,58 @@ layers configuration."
  '(recentf-max-saved-items 999)
  '(recentf-save-file "~/Dropbox/emacs/.savefile/recentf")
  '(ring-bell-function (quote ignore) t)
- '(safe-local-variable-values
+ '(rm-blacklist
    (quote
-    ((eval when
-           (fboundp
-            (quote rainbow-mode))
-           (rainbow-mode 1)))))
+    (" hl-p" "Guide" "Olv" "Helm" "Palimpsest" "Olivetti")))
+ '(safe-local-variable-values (quote ((org-export-allow-bind-keywords . t))))
  '(send-mail-function (quote sendmail-send-it))
  '(smex-prompt-string "I love you. ")
+ '(sp-base-key-bindings nil)
  '(spacemacs-show-trailing-whitespace nil)
  '(standard-indent 3)
+ '(tool-bar-mode nil)
  '(tooltip-mode nil)
  '(tramp-default-method "ssh")
  '(undo-limit 800000)
  '(user-full-name "Jay Dixit")
  '(user-mail-address "dixit@aya.yale.edu")
+ '(vc-annotate-background "#2B2B2B")
+ '(vc-annotate-color-map
+   (quote
+    ((20 . "#BC8383")
+     (40 . "#CC9393")
+     (60 . "#DFAF8F")
+     (80 . "#D0BF8F")
+     (100 . "#E0CF9F")
+     (120 . "#F0DFAF")
+     (140 . "#5F7F5F")
+     (160 . "#7F9F7F")
+     (180 . "#8FB28F")
+     (200 . "#9FC59F")
+     (220 . "#AFD8AF")
+     (240 . "#BFEBBF")
+     (260 . "#93E0E3")
+     (280 . "#6CA0A3")
+     (300 . "#7CB8BB")
+     (320 . "#8CD0D3")
+     (340 . "#94BFF3")
+     (360 . "#DC8CC3"))))
+ '(vc-annotate-very-old-color "#DC8CC3")
  '(visual-line-mode nil t)
- '(web-mode-load-hook (quote ((lambda nil (abbrev-mode -1))))))
+ '(web-mode-load-hook (quote ((lambda nil (abbrev-mode -1)))))
+ '(writeroom-global-effects
+   (quote
+    (writeroom-toggle-menu-bar-lines writeroom-toggle-tool-bar-lines writeroom-toggle-vertical-scroll-bars))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bold ((t (:bold t :foreground "red"))))
  '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil))))
- '(org-link ((t (:underline nil)))))
+ '(hl-line ((t (:inherit highlight))))
+ '(org-headline-done ((t (:strike-through t))))
+ '(org-link ((t (:underline nil))))
+ '(tabula-rasa-cursor ((t (:inherit nil :foreground "red" :inverse-video t))) t t)
+ '(writegood-weasels-face ((t (:underline (:color "orange" :style wave))))))
