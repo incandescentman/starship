@@ -176,6 +176,9 @@ layers configuration."
 (custom-set-faces 
 '(org-link ((t (:underline nil)))))
 
+(setq yas-snippet-dirs '("~/Downloads/interesting-snippets" "~/Dropbox/emacs/snippets"))
+
+
 ;; automatically display any prefix
 (setq guide-key/recursive-key-sequence-flag t)
 
