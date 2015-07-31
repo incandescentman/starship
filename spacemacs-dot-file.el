@@ -94,7 +94,7 @@ before layers configuration."
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
 ;;   dotspacemacs-emacs-leader-key "M-m"
-dotspacemacs-emacs-leader-key "="
+dotspacemacs-emacs-leader-key "]"
    ;; Major mode leader key is a shortcut key which is the equivalent of
    ;; pressing `<leader> m`. Set it to `nil` to disable it.
    dotspacemacs-major-mode-leader-key ","
