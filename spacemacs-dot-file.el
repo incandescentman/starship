@@ -34,7 +34,7 @@
      ;;     html
      shell
      shell-scripts
-     ;;      spotify
+     spotify
      ;;   chrome
      ;; syntax-checking
      )
