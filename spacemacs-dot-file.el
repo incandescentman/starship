@@ -93,8 +93,8 @@ before layers configuration."
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
-;;   dotspacemacs-emacs-leader-key "M-m"
-dotspacemacs-emacs-leader-key "]"
+   ;;   dotspacemacs-emacs-leader-key "M-m"
+   dotspacemacs-emacs-leader-key "]"
    ;; Major mode leader key is a shortcut key which is the equivalent of
    ;; pressing `<leader> m`. Set it to `nil` to disable it.
    dotspacemacs-major-mode-leader-key ","
@@ -174,79 +174,79 @@ layers configuration."
           (height . 42) ; lines
           ))
 
-(custom-set-faces 
-'(org-link ((t (:underline nil)))))
+  (custom-set-faces 
+   '(org-link ((t (:underline nil)))))
 
-(setq yas-snippet-dirs '("~/Downloads/interesting-snippets" "~/Dropbox/emacs/snippets"))
+  (setq yas-snippet-dirs '("~/Downloads/interesting-snippets" "~/Dropbox/emacs/snippets"))
 
 
-;; automatically display any prefix
-(setq guide-key/recursive-key-sequence-flag t)
+  ;; automatically display any prefix
+  (setq guide-key/recursive-key-sequence-flag t)
 
-;; enable python
-(org-babel-do-load-languages 'org-babel-load-languages '((python . t)))
+  ;; enable python
+  (org-babel-do-load-languages 'org-babel-load-languages '((python . t)))
 
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/appearance-jay-custom-functions.org")
-(load "/Users/jay/Dropbox/emacs/prelude/core/prelude-core.el")
+  (load "/Users/jay/Dropbox/emacs/prelude/core/prelude-core.el")
 
   (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
   (load "/Users/jay/gnulisp/book-functions.el")
 
-;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
-;; I've been wanting to do this for so long. :-)
-;; this works correctly!!
-(eval-after-load "org"
-  '(progn
-     (define-key org-mode-map (kbd "<M-S-left>") nil)
-     (define-key org-mode-map (kbd "<M-S-right>") nil)
-     (define-key org-mode-map (kbd "<M-S-up>") nil)
-     (define-key org-mode-map (kbd "<M-S-down>") nil)
-     (define-key org-mode-map (kbd "<M-left>") nil)
-     (define-key org-mode-map (kbd "<M-right>") nil)
-     (define-key org-mode-map (kbd "<M-right>") nil)
-     (define-key org-mode-map [C-S-right] 'org-shiftmetaright)
-     (define-key org-mode-map [C-S-left] 'org-shiftmetaleft)
-     (define-key org-mode-map [C-right] 'org-metaright)
-     (define-key org-mode-map [C-left] 'org-metaleft)
-     (define-key org-mode-map [C-up] 'org-metaup)
-     (define-key org-mode-map [C-down] 'org-metadown)
-     (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
-     (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
-     (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
-     ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
-))
+  ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
+  ;; I've been wanting to do this for so long. :-)
+  ;; this works correctly!!
+  (eval-after-load "org"
+    '(progn
+       (define-key org-mode-map (kbd "<M-S-left>") nil)
+       (define-key org-mode-map (kbd "<M-S-right>") nil)
+       (define-key org-mode-map (kbd "<M-S-up>") nil)
+       (define-key org-mode-map (kbd "<M-S-down>") nil)
+       (define-key org-mode-map (kbd "<M-left>") nil)
+       (define-key org-mode-map (kbd "<M-right>") nil)
+       (define-key org-mode-map (kbd "<M-right>") nil)
+       (define-key org-mode-map [C-S-right] 'org-shiftmetaright)
+       (define-key org-mode-map [C-S-left] 'org-shiftmetaleft)
+       (define-key org-mode-map [C-right] 'org-metaright)
+       (define-key org-mode-map [C-left] 'org-metaleft)
+       (define-key org-mode-map [C-up] 'org-metaup)
+       (define-key org-mode-map [C-down] 'org-metadown)
+       (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
+       (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
+       (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
+       ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
+       ))
 
-(smartparens-global-mode 1)
+  (smartparens-global-mode 1)
 
-(add-hook 'ido-setup-hook (lambda ()
-                            (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
-                            (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
-                            ))
+  (add-hook 'ido-setup-hook (lambda ()
+                              (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
+                              (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
+                              ))
 
-(define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
+  (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
 
-(setq helm-echo-input-in-header-line nil) 
+  (setq helm-echo-input-in-header-line nil) 
 
-(add-hook 'helm-after-initialize-hook
-          #'(lambda () (setq helm-echo-input-in-header-line nil))) 
+  (add-hook 'helm-after-initialize-hook
+            #'(lambda () (setq helm-echo-input-in-header-line nil))) 
 
-(setq org-agenda-files
-      (quote
-       ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
+  (setq org-agenda-files
+        (quote
+         ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
 
-(setq org-bullets-bullet-list '("◉" "○" "✸" "✿"))
+  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿"))
 
-(load "/Users/jay/Dropbox/emacs/prelude/personal/gnugol.el")
-(require 'gnugol)
-(require 'reveal-in-finder)
+  (load "/Users/jay/Dropbox/emacs/prelude/personal/gnugol.el")
+  (require 'gnugol)
+  (require 'reveal-in-finder)
 
-(recenter-top-bottom)
-(setq case-fold-search t)
+  (recenter-top-bottom)
+  (setq case-fold-search t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-)
+  )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Do not write anything past this comment. This is where Emacs will
