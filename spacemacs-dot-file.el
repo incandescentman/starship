@@ -21,7 +21,7 @@
      ;; (git :variables
      org
      ;;      osx
-     ;;      xkcd
+     xkcd
      smex
      emacs-lisp
      ;;      markdown
@@ -30,7 +30,8 @@
      gnus
      ;;      version-control
      ;;     latex
-     ;;     fasd
+     fasd
+;;     search-engine
      ;;     html
      shell
      shell-scripts
@@ -216,6 +217,7 @@ layers configuration."
        (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
        ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
+       (find-file "~/nd/playful.org")
        (imenu-list-minor-mode) 
        ))
 
@@ -306,6 +308,8 @@ layers configuration."
  '(edit-server-default-major-mode (quote org-mode))
  '(edit-server-new-frame t)
  '(eshell-load-hook (quote ((lambda nil (abbrev-mode -1)))))
+ '(expand-region-contract-fast-key "V")
+ '(expand-region-reset-fast-key "r")
  '(fci-rule-color "#383838" t)
  '(flyspell-abbrev-p t)
  '(flyspell-mark-duplications-exceptions
