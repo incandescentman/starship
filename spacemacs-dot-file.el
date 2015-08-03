@@ -216,6 +216,7 @@ layers configuration."
        (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
        ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
+       (imenu-list-minor-mode) 
        ))
 
   (smartparens-global-mode 1)
@@ -332,6 +333,8 @@ layers configuration."
  '(ido-save-directory-list-file "~/Dropbox/emacs/prelude/personal/.savefile/ido.hist")
  '(ido-use-faces t)
  '(ido-use-url-at-point t)
+ '(imenu-list-focus-after-activation nil)
+ '(imenu-list-size 0.3)
  '(inhibit-startup-screen t)
  '(initial-buffer-choice "~/Dropbox/writing/notationaldata/playful.org")
  '(initial-major-mode (quote org-mode))
@@ -477,6 +480,7 @@ layers configuration."
  '(org-icalendar-store-UID t)
  '(org-icalendar-use-deadline (quote (todo-due)))
  '(org-icalendar-use-scheduled (quote (event-if-todo)))
+ '(org-imenu-depth 2)
  '(org-indent-indentation-per-level 2)
  '(org-indent-mode-turns-off-org-adapt-indentation nil)
  '(org-indent-mode-turns-on-hiding-stars nil)
