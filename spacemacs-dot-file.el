@@ -284,13 +284,11 @@ layers configuration."
  '(case-fold-search t)
  '(ccm-recenter-at-end-of-file t)
  '(clean-buffer-list-delay-general 1)
- '(column-number-mode nil)
  '(completion-ignored-extensions
    (quote
     (".o" "~" ".bin" ".lbin" ".so" ".a" ".ln" ".blg" ".bbl" ".elc" ".lof" ".glo" ".idx" ".lot" ".svn/" ".hg/" ".git/" ".bzr/" "CVS/" "_darcs/" "_MTN/" ".fmt" ".tfm" ".class" ".fas" ".lib" ".mem" ".x86f" ".sparcf" ".fasl" ".ufsl" ".fsl" ".dxl" ".pfsl" ".dfsl" ".p64fsl" ".d64fsl" ".dx64fsl" ".lo" ".la" ".gmo" ".mo" ".toc" ".aux" ".cp" ".fn" ".ky" ".pg" ".tp" ".vr" ".cps" ".fns" ".kys" ".pgs" ".tps" ".vrs" ".pyc" ".pyo" ".tex" ".mm" "Icon" ".html" ".zip")))
  '(compose-mail-user-agent-warnings nil)
  '(cua-highlight-region-shift-only t)
- '(cua-mode nil nil (cua-base))
  '(cursor-type (quote box))
  '(custom-safe-themes
    (quote
@@ -330,7 +328,7 @@ layers configuration."
    (quote
     (".#*" "*.o" "*~" "*.bin" "*.lbin" "*.so" "*.a" "*.ln" "*.blg" "*.bbl" "*.elc" "*.lof" "*.glo" "*.idx" "*.lot" "*.fmt" "*.tfm" "*.class" "*.fas" "*.lib" "*.mem" "*.x86f" "*.sparcf" "*.fasl" "*.ufsl" "*.fsl" "*.dxl" "*.pfsl" "*.dfsl" "*.p64fsl" "*.d64fsl" "*.dx64fsl" "*.lo" "*.la" "*.gmo" "*.mo" "*.toc" "*.aux" "*.cp" "*.fn" "*.ky" "*.pg" "*.tp" "*.vr" "*.cps" "*.fns" "*.kys" "*.pgs" "*.tps" "*.vrs" "*.pyc" "*.pyo" "*.pdf" "*.tex" "*.html" "*.mm" "*.js" "*.doc" "*.pdf" "*.docx" "*.xls" "*.jpg" "*.png" "*.xlsx" "*devonthink*" "*.gif" "Icon*")))
  '(grep-highlight-matches (quote always))
- '(helm-M-x-always-save-history t)
+ '(helm-M-x-always-save-history t t)
  '(helm-ff-smart-completion t)
  '(htmlize-output-type (quote inline-css))
  '(ido-ignore-files
@@ -580,6 +578,7 @@ layers configuration."
     (" hl-p" "Guide" "Olv" "Helm" "Palimpsest" "Olivetti")))
  '(safe-local-variable-values (quote ((org-export-allow-bind-keywords . t))))
  '(send-mail-function (quote sendmail-send-it))
+ '(show-paren-mode t)
  '(smex-prompt-string "I love you. ")
  '(sp-base-key-bindings nil)
  '(spacemacs-show-trailing-whitespace nil)
