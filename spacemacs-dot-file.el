@@ -216,10 +216,12 @@ layers configuration."
        (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
        (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
-       ;;     (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content) ; formerly bound to C-return
+       ;; (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content)
+       ;; formerly bound to C-return
        (find-file "~/nd/playful.org")
-       (imenu-list-minor-mode) 
-       ) 
+       (imenu-list-minor-mode)
+       ))
+
   (smartparens-global-mode 1)
 
   (add-hook 'ido-setup-hook (lambda ()
