@@ -16,7 +16,7 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe palimpsest olivetti org-mac-link org-plus-contrib recentf writeroom-mode key-chord recent-addresses helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download gist tiny imenu-list fountain-mode stripe-buffer
+magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe palimpsest olivetti org-mac-link org-plus-contrib recentf writeroom-mode key-chord recent-addresses helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download gist tiny imenu-list fountain-mode stripe-buffer mu4e-maildirs-extension notmuch
 )) 
 
   "List of all packages to install and/or initialize. Built-in packages
@@ -76,6 +76,9 @@ adaptive-wrap
 (defun jay/init-fountain-mode () (use-package fountain-mode))
 
 (defun jay/init-stripe-buffer () (use-package stripe-buffer))
+
+(defun jay/init-mu4e-maildirs-extension () (use-package mu4e-maildirs-extension))
+(defun jay/init-mu4e-notmuch () (use-package mu4e-maildirs-notmuch))
 
 
 
