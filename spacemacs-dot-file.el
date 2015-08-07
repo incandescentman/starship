@@ -289,11 +289,13 @@ layers configuration."
  '(case-fold-search t)
  '(ccm-recenter-at-end-of-file t)
  '(clean-buffer-list-delay-general 1)
+ '(column-number-mode nil)
  '(completion-ignored-extensions
    (quote
     (".o" "~" ".bin" ".lbin" ".so" ".a" ".ln" ".blg" ".bbl" ".elc" ".lof" ".glo" ".idx" ".lot" ".svn/" ".hg/" ".git/" ".bzr/" "CVS/" "_darcs/" "_MTN/" ".fmt" ".tfm" ".class" ".fas" ".lib" ".mem" ".x86f" ".sparcf" ".fasl" ".ufsl" ".fsl" ".dxl" ".pfsl" ".dfsl" ".p64fsl" ".d64fsl" ".dx64fsl" ".lo" ".la" ".gmo" ".mo" ".toc" ".aux" ".cp" ".fn" ".ky" ".pg" ".tp" ".vr" ".cps" ".fns" ".kys" ".pgs" ".tps" ".vrs" ".pyc" ".pyo" ".tex" ".mm" "Icon" ".html" ".zip")))
  '(compose-mail-user-agent-warnings nil)
  '(cua-highlight-region-shift-only t)
+ '(cua-mode nil nil (cua-base))
  '(cursor-type (quote box))
  '(custom-safe-themes
    (quote
@@ -406,7 +408,7 @@ layers configuration."
  '(org-clocktable-defaults
    (quote
     (:maxlevel 3 :lang "en" :scope file :block nil :wstart 1 :mstart 1 :tstart nil :tend nil :step nil :stepskip0 nil :fileskip0 nil :tags nil :emphasize nil :link nil :narrow 40! :indent t :formula nil :timestamp nil :level nil :tcolumns nil :formatter nil)))
- '(org-closed-string "COMPLETED:")
+ '(org-closed-string "COMPLETED:" t)
  '(org-confirm-babel-evaluate nil)
  '(org-ctrl-k-protect-subtree t)
  '(org-custom-properties (quote (">")))
@@ -459,6 +461,7 @@ layers configuration."
  '(org-hide-block-startup nil)
  '(org-hide-emphasis-markers t)
  '(org-hide-leading-stars t)
+ '(org-highlight-links (quote (bracket plain radio tag date footnote)))
  '(org-html-container-element "div")
  '(org-html-footnotes-section
    "<div id=\"footnotes\">
@@ -529,7 +532,7 @@ layers configuration."
  '(org-mac-grab-Together-app-p nil)
  '(org-modules
    (quote
-    (org-bbdb org-bibtex org-gnus org-info org-annotate-file org-bullets org-invoice org-element org-mac-iCal org-mac-link org-panel org-secretary org-velocity org-habit org-irc org-mew org-mhe org-rmail org-vm org-wl org-w3m org-choose org-collector org-invoice)))
+    (org-bbdb org-gnus org-info org-annotate-file org-bullets org-invoice org-mac-iCal org-mac-link org-panel org-habit org-irc org-mew org-vm org-wl org-w3m org-choose org-collector)))
  '(org-n-level-faces 9)
  '(org-odd-levels-only nil)
  '(org-pomodoro-format "Pomodoro: %s")
