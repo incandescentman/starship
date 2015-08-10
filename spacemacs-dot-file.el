@@ -532,7 +532,7 @@ layers configuration."
  '(org-mac-grab-Together-app-p nil)
  '(org-modules
    (quote
-    (org-bbdb org-gnus org-info org-annotate-file org-bullets org-invoice org-mac-iCal org-mac-link org-panel org-habit org-irc org-mew org-vm org-wl org-w3m org-choose org-collector)))
+    (org-bbdb org-gnus org-info org-annotate-file org-bullets org-invoice org-mac-iCal org-mac-link org-panel org-habit org-irc org-mew org-vm org-wl org-w3m org-choose)))
  '(org-n-level-faces 9)
  '(org-odd-levels-only nil)
  '(org-pomodoro-format "Pomodoro: %s")
