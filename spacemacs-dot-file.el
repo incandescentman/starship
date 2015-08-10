@@ -227,7 +227,7 @@ layers configuration."
        (imenu-list-minor-mode)
        ))
 
-  (smartparens-global-mode 1)
+  (autopair-global-mode 1)
 
   (add-hook 'ido-setup-hook (lambda ()
                               (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
