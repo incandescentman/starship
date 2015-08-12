@@ -19,7 +19,7 @@
      auto-completion
      ;; better-defaults
      ;; (git :variables
-;;;;;;;;     org
+;; org
      ;;      osx
      xkcd
      smex
@@ -157,6 +157,9 @@ before layers configuration."
   (normal-top-level-add-subdirs-to-load-path)) 
 (require 'mu4e)
 
+(add-to-list 'load-path "/Users/jay/Dropbox/emacs/spacemacs/elpa/org-plus-contrib-20150810/")
+
+
   ;;
   )
 
@@ -199,6 +202,8 @@ layers configuration."
   (load "/Users/jay/Dropbox/emacs/prelude/personal/skeletons.el")
   (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
   (load "/Users/jay/gnulisp/book-functions.el")
+  (load "/Users/jay/gnulisp/reveal-in-finder.el")
+
 
   ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
   ;; I've been wanting to do this for so long. :-)
