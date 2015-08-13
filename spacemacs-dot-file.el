@@ -19,7 +19,7 @@
      auto-completion
      ;; better-defaults
      ;; (git :variables
-;; org
+org
      ;;      osx
      xkcd
      smex
