@@ -16,7 +16,7 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-org-plus-contrib magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe palimpsest olivetti org-mac-link recentf writeroom-mode key-chord recent-addresses helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download gist tiny imenu-list fountain-mode stripe-buffer mu4e-maildirs-extension notmuch peg nm zone direx imenu-anywhere project-explorer discover-my-major 
+org-plus-contrib magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe palimpsest olivetti org-mac-link recentf writeroom-mode key-chord recent-addresses helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download gist tiny imenu-list fountain-mode stripe-buffer mu4e-maildirs-extension notmuch peg nm zone direx project-explorer discover-my-major 
 )) 
 
   "List of all packages to install and/or initialize. Built-in packages
@@ -86,7 +86,6 @@ adaptive-wrap
 
 (defun jay/init-zone () (use-package zone))
 (defun jay/init-direx () (use-package direx))
-(defun jay/init-imenu-anywhere () (use-package imenu-anywhere))
 (defun jay/init-project-explorer () (use-package project-explorer))
 (defun jay/init-discover-my-major () (use-package discover-my-major))
 
