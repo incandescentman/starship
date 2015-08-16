@@ -195,6 +195,8 @@ layers configuration."
   ;; enable python
   (org-babel-do-load-languages 'org-babel-load-languages '((python . t)))
 
+
+
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/appearance-jay-custom-functions.org")
@@ -203,6 +205,7 @@ layers configuration."
   (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
   (load "/Users/jay/gnulisp/book-functions.el")
   (load "/Users/jay/gnulisp/reveal-in-finder.el")
+(load "/Users/jay/Dropbox/emacs/prelude/personal/jay-osx.el")
 
 
   ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
