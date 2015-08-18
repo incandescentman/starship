@@ -34,6 +34,7 @@
      shell
      shell-scripts
      spotify
+     org
      ;;   chrome
      ;; syntax-checking
      jay
