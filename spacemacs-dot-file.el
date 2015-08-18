@@ -11,16 +11,14 @@
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
-   '(jay
+   '(
+
      ;; --------------------------------------------------------
      ;; Example of useful layers you may want to use right away
      ;; Uncomment a layer name and press C-c C-c to install it
      ;; --------------------------------------------------------
      auto-completion
-     ;; better-defaults
-     ;; (git :variables
-org
-     ;;      osx
+     ;; better-defaults (git :variables ≈evalorg osx
      xkcd
      smex
      emacs-lisp
@@ -38,6 +36,7 @@ org
      spotify
      ;;   chrome
      ;; syntax-checking
+     jay
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(vi-tilde-fringe)
