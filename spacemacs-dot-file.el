@@ -34,7 +34,7 @@
      shell
      shell-scripts
      spotify
-     org
+org
      ;;   chrome
      ;; syntax-checking
      jay
@@ -157,7 +157,7 @@ before layers configuration."
   (normal-top-level-add-subdirs-to-load-path)) 
 (require 'mu4e)
 
-(add-to-list 'load-path "/Users/jay/Dropbox/emacs/spacemacs/elpa/org-plus-contrib-20150810/")
+(add-to-list 'load-path "/Users/jay/Dropbox/emacs/prelude/elpa/org-plus-contrib-20150810/")
 
 
   ;;
@@ -186,7 +186,7 @@ layers configuration."
   (custom-set-faces 
    '(org-link ((t (:underline nil)))))
 
-  (setq yas-snippet-dirs '("~/Downloads/interesting-snippets" "~/Dropbox/emacs/snippets"))
+;;  (setq yas-snippet-dirs '("~/Downloads/interesting-snippets" "~/Dropbox/emacs/snippets"))
 
 
   ;; automatically display any prefix
