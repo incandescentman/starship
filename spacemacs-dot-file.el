@@ -34,7 +34,7 @@
      shell
      shell-scripts
      spotify
-org
+;; org
      ;;   chrome
      ;; syntax-checking
      jay
@@ -157,7 +157,7 @@ before layers configuration."
   (normal-top-level-add-subdirs-to-load-path)) 
 (require 'mu4e)
 
- (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20150914") 
+ (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20150921") 
   ;;
   )
 
@@ -230,7 +230,7 @@ layers configuration."
        ;; (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content)
        ;; formerly bound to C-return
        (find-file "~/nd/playful.org")
-       (imenu-list-minor-mode)
+;;       (imenu-list-minor-mode)
        ))
 
   (autopair-global-mode 1)
