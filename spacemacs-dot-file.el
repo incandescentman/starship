@@ -34,13 +34,15 @@
      shell
      shell-scripts
      spotify
-;; org
+org
      ;;   chrome
      ;; syntax-checking
      jay
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '(vi-tilde-fringe)
+   dotspacemacs-excluded-packages '(
+vi-tilde-fringe
+                                    )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'
@@ -157,8 +159,9 @@ before layers configuration."
   (normal-top-level-add-subdirs-to-load-path)) 
 (require 'mu4e)
 
- (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20150921") 
-  ;;
+ (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20150929") 
+
+;;
   )
 
 (defun dotspacemacs/config ()
@@ -204,6 +207,8 @@ layers configuration."
   (load "/Users/jay/gnulisp/book-functions.el")
   (load "/Users/jay/gnulisp/reveal-in-finder.el")
 (load "/Users/jay/Dropbox/emacs/prelude/personal/jay-osx.el")
+(load "/Users/jay/Dropbox/emacs/prelude/personal/poetry_JD.el")
+(load "/Users/jay/Dropbox/emacs/prelude/personal/define-word.el")
 
 
   ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
@@ -227,6 +232,8 @@ layers configuration."
        (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
        (define-key org-mode-map (kbd "<C-return>") 'smart-org-meta-return-dwim)
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
+       (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
+(define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
        ;; (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content)
        ;; formerly bound to C-return
        (find-file "~/nd/playful.org")
