@@ -34,7 +34,7 @@
      shell
      shell-scripts
      spotify
-org
+;; org
      ;;   chrome
      ;; syntax-checking
      jay
@@ -247,6 +247,7 @@ layers configuration."
                               (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
                               ))
 
+
   (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
 
   (setq helm-echo-input-in-header-line nil) 
@@ -266,6 +267,9 @@ layers configuration."
 
   (recenter-top-bottom)
   (setq case-fold-search t)
+
+
+(setq company-global-modes '(not org-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
