@@ -187,7 +187,7 @@ layers configuration."
   (custom-set-faces 
    '(org-link ((t (:underline nil)))))
 
-;;  (setq yas-snippet-dirs '("~/Downloads/interesting-snippets" "~/Dropbox/emacs/snippets"))
+(setq yas-snippet-dirs '("/Users/jay/Dropbox/emacs/interesting-snippets/" "~/Dropbox/emacs/snippets"))
 
 
   ;; automatically display any prefix
