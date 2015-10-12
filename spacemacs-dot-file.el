@@ -194,8 +194,14 @@ layers configuration."
   (setq guide-key/recursive-key-sequence-flag t)
 
   ;; enable python
-  (org-babel-do-load-languages 'org-babel-load-languages '((python . t)))
-
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+  '( (perl . t)         
+     (ruby . t)
+     (sh . t)
+     (python . t)
+     (emacs-lisp . t)   
+   ))
 
 
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
