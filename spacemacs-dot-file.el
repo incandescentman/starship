@@ -19,6 +19,7 @@
      ;; --------------------------------------------------------
      auto-completion
      ;; better-defaults
+     git
      org
      osx
      xkcd
@@ -42,7 +43,7 @@
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
-vi-tilde-fringe
+;; vi-tilde-fringe
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
