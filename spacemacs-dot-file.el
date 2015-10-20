@@ -18,7 +18,9 @@
      ;; Uncomment a layer name and press C-c C-c to install it
      ;; --------------------------------------------------------
      auto-completion
-     ;; better-defaults (git :variables ≈evalorg osx
+     ;; better-defaults
+     org
+     osx
      xkcd
      smex
      emacs-lisp
@@ -34,7 +36,6 @@
      shell
      shell-scripts
      spotify
-org
      ;;   chrome
      ;; syntax-checking
      jay
@@ -159,7 +160,7 @@ before layers configuration."
   (normal-top-level-add-subdirs-to-load-path)) 
 (require 'mu4e)
 
- (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20151016") 
+ (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20151020") 
 
 ;;
   )
