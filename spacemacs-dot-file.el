@@ -177,7 +177,6 @@ layers configuration."
 
   (setq vc-follow-symlinks t)
   (setq global-flyspell-mode t)
-  (menu-bar-mode 1)
   (setq org-confirm-babel-evaluate nil)
 
   (setq default-frame-alist
@@ -278,6 +277,9 @@ layers configuration."
 
 
 (setq company-global-modes '(not org-mode))
+
+  (toggle-fullscreen)
+  (menu-bar-mode -1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
