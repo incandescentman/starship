@@ -69,7 +69,7 @@ before layers configuration."
    ;; directory. A string value must be a path to a .PNG file.
    ;; If the value is nil then no banner is displayed.
    ;; dotspacemacs-startup-banner 'official
-   dotspacemacs-startup-banner 'doge
+;;   dotspacemacs-startup-banner 'doge
    ;; t if you always want to see the changelog at startup
    dotspacemacs-always-show-changelog t
    ;; List of items to show in the startup buffer. If nil it is disabled.
@@ -78,7 +78,9 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(leuven
+   dotspacemacs-themes '(
+                         ;; spacemacs-dark
+                         leuven
                          spacemacs-light
                          spacemacs-dark
                          solarized-light 
@@ -166,7 +168,7 @@ before layers configuration."
 ;;
   )
 
-(defun dotspacemacs/config ()
+(defun dotspacemacs/user-config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
@@ -184,9 +186,6 @@ layers configuration."
           (width . 160) ; character
           (height . 42) ; lines
           ))
-
-  (custom-set-faces 
-   '(org-link ((t (:underline nil)))))
 
 (setq yas-snippet-dirs '("/Users/jay/Dropbox/emacs/interesting-snippets/" "~/Dropbox/emacs/snippets"))
 
@@ -254,7 +253,6 @@ layers configuration."
                               (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
                               ))
 
-
   (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
 
   (setq helm-echo-input-in-header-line nil) 
@@ -281,6 +279,12 @@ layers configuration."
   (toggle-fullscreen)
   (menu-bar-mode -1)
 (org-mode)
+(custom-set-faces
+'(bold ((t (:inherit font-lock-warning-face :weight bold))))
+'(org-link ((t (:underline nil)))))
+
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
