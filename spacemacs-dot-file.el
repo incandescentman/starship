@@ -283,7 +283,7 @@ layers configuration."
 '(bold ((t (:inherit font-lock-warning-face :weight bold))))
 '(org-link ((t (:underline nil)))))
 
-
+(toggle-menu-bar-mode-from-frame)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
