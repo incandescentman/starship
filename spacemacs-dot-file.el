@@ -40,6 +40,7 @@
      ;;   chrome
      ;; syntax-checking
      jay
+     javascript
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
@@ -163,7 +164,7 @@ before layers configuration."
   (normal-top-level-add-subdirs-to-load-path)) 
 (require 'mu4e)
 
- (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20151020") 
+ (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20151025") 
 
 ;;
   )
@@ -285,9 +286,9 @@ layers configuration."
 
 (toggle-menu-bar-mode-from-frame)
 
+(setq auto-revert-interval 1)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
