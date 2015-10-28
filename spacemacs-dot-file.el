@@ -80,7 +80,7 @@ before layers configuration."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         ;; spacemacs-dark
+spacemacs-dark
                          leuven
                          spacemacs-light
                          spacemacs-dark
@@ -230,8 +230,8 @@ layers configuration."
        (define-key org-mode-map (kbd "<M-left>") nil)
        (define-key org-mode-map (kbd "<M-right>") nil)
        (define-key org-mode-map (kbd "<M-right>") nil)
-       (define-key org-mode-map [C-S-right] 'org-shiftright)
-       (define-key org-mode-map [C-S-left] 'org-shiftleft)
+       (define-key org-mode-map [C-S-right] 'org-shiftmetaright)
+       (define-key org-mode-map [C-S-left] 'org-shiftmetaleft)
        (define-key org-mode-map [C-right] 'org-metaright)
        (define-key org-mode-map [C-left] 'org-metaleft)
        (define-key org-mode-map [C-up] 'org-metaup)
@@ -290,6 +290,8 @@ layers configuration."
 
 (setq auto-revert-interval 1)
 (setq org-hide-leading-stars nil)
+
+(smartparens-global-mode 1)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
