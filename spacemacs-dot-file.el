@@ -81,7 +81,7 @@ before layers configuration."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ;; spacemacs-dark
-;;                         zenburn
+                         zenburn
                           leuven
                          spacemacs-light
                          spacemacs-dark
@@ -296,7 +296,8 @@ layers configuration."
 
 ;; if Emacs is running in terminal
 
-(iterm-mode)
+
+(if (is-in-terminal) (iterm-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
