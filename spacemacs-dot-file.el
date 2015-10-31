@@ -80,8 +80,9 @@ before layers configuration."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-spacemacs-dark
-                         leuven
+                         ;; spacemacs-dark
+;;                         zenburn
+                          leuven
                          spacemacs-light
                          spacemacs-dark
                          solarized-light 
@@ -164,7 +165,7 @@ spacemacs-dark
   (normal-top-level-add-subdirs-to-load-path)) 
 (require 'mu4e)
 
- (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20151025") 
+ (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20151029") 
 
 ;;
   )
@@ -292,6 +293,10 @@ layers configuration."
 (setq org-hide-leading-stars nil)
 
 (smartparens-global-mode 1)
+
+;; if Emacs is running in terminal
+
+(iterm-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
