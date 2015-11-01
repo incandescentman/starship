@@ -44,7 +44,8 @@
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
-;; vi-tilde-fringe
+                                    ;; vi-tilde-fringe
+                                    company
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -252,10 +253,6 @@ layers configuration."
 
 (autopair-global-mode -1)
 
-  (add-hook 'ido-setup-hook (lambda ()
-                              (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
-                              (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
-                              ))
 
   (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
 
@@ -294,9 +291,15 @@ layers configuration."
 
 (smartparens-global-mode 1)
 
+
+ (add-hook 'ido-setup-hook (lambda ()
+                              (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
+                              (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
+                              ) t)
+
+
+
 ;; if Emacs is running in terminal
-
-
 (if (is-in-terminal) (iterm-mode))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
