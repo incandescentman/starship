@@ -218,6 +218,7 @@ layers configuration."
 (load "/Users/jay/Dropbox/emacs/prelude/personal/jay-osx.el")
 (load "/Users/jay/Dropbox/emacs/prelude/personal/poetry_JD.el")
 (load "/Users/jay/Dropbox/emacs/prelude/personal/define-word.el")
+(load "/Users/jay/Dropbox/emacs/prelude/personal/searchlink/searchlink.el")
 
 
   ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
