@@ -36,11 +36,17 @@
      ;;     html
      shell
      shell-scripts
-     spotify
-     ;;   chrome
+;;     spotify
+
      ;; syntax-checking
      jay
      javascript
+
+     floobits
+     deft
+     chrome
+     themes-megapack
+     ibuffer
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
@@ -297,8 +303,12 @@ layers configuration."
  (add-hook 'ido-setup-hook (lambda ()
                               (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
                               (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
-                              ) t)
+) t)
 
+
+(eval-after-load "org"
+                                (menu-bar-mode -1)
+)
 
 (defadvice load-theme (before theme-dont-propagate activate)
  (mapcar #'disable-theme custom-enabled-themes))
