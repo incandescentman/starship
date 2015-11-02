@@ -82,15 +82,16 @@ before layers configuration."
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
                          ;; spacemacs-dark
-                         zenburn
+                         ;; zenburn
                           leuven
-                         spacemacs-light
-                         spacemacs-dark
-                         solarized-light 
-                         solarized-dark
-                         monokai
-                         leuven
-                         zenburn)
+                         ;; spacemacs-light
+                         ;; spacemacs-dark
+                         ;; solarized-light
+                         ;; solarized-dark
+                         ;; monokai
+                         ;; leuven
+                         zenburn
+                         )
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
@@ -299,9 +300,19 @@ layers configuration."
                               ) t)
 
 
+(defadvice load-theme (before theme-dont-propagate activate)
+ (mapcar #'disable-theme custom-enabled-themes))
+
 
 ;; if Emacs is running in terminal
-(if (is-in-terminal) (iterm-mode))
+(if (is-in-terminal)
+(iterm-mode)
+(load-theme 'zenburn)
+(org-mode)
+(magenta-cursor)
+)
+
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
