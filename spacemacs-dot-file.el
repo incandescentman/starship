@@ -322,7 +322,10 @@ layers configuration."
 (magenta-cursor)
 )
 
-(setq org-adapt-indentation)
+(iterm-mode)
+
+
+(setq org-adapt-indentation nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
