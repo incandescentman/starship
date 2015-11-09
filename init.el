@@ -174,8 +174,6 @@ before layers configuration."
   (normal-top-level-add-subdirs-to-load-path)) 
 (require 'mu4e)
 
- (add-to-list 'load-path "/Users/jay/prelude/elpa/org-plus-contrib-20151102") 
-
 ;;
   )
 
@@ -320,9 +318,8 @@ layers configuration."
 ;; if Emacs is running in terminal
 (if (is-in-terminal)
 (iterm-mode)
-(load-theme 'zenburn)
+;; (load-theme 'zenburn)
 (org-mode)
-(magenta-cursor)
 )
 
 (iterm-mode)
@@ -330,7 +327,7 @@ layers configuration."
 
 (setq org-adapt-indentation nil)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
