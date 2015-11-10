@@ -327,6 +327,8 @@ layers configuration."
 
 (setq org-adapt-indentation nil)
 
+(setq global-auto-revert-mode 1)
+
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
