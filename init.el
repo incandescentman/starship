@@ -226,6 +226,7 @@ layers configuration."
 (load "/Users/jay/Dropbox/emacs/prelude/personal/define-word.el")
 (load "/Users/jay/Dropbox/emacs/prelude/personal/searchlink/searchlink.el")
 ;; (load "/Users/jay/Dropbox/emacs/prelude/personal/ivy-smex.el")
+(load "/Users/jay/Dropbox/emacs/prelude/personal/send-message-without-bullets.el")
 
 
 
