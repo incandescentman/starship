@@ -53,6 +53,7 @@ dotspacemacs-configuration-layer-path '("~/Dropbox/emacs/spacemacs/private/jay/"
    dotspacemacs-excluded-packages '(
                                     ;; vi-tilde-fringe
                                     company
+ws-butler
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
