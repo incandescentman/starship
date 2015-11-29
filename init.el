@@ -330,6 +330,8 @@ layers configuration."
 
 (setq global-auto-revert-mode 1)
 
+(leuven)
+
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
