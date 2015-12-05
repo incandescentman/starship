@@ -332,6 +332,10 @@ layers configuration."
 
 (leuven)
 
+(setq-default save-place t)
+(require 'saveplace)
+
+
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
