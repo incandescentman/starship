@@ -332,10 +332,6 @@ layers configuration."
 
 (leuven)
 
-(setq-default save-place t)
-(require 'saveplace)
-
-
 (setq org-emphasis-alist
    (quote
     (("*" bold)
