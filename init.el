@@ -336,6 +336,20 @@ layers configuration."
 (require 'saveplace)
 
 
+(setq org-emphasis-alist
+   (quote
+    (("*" bold)
+     ("/" italic)
+     ("_" underline)
+     ("=" org-code verbatim)
+     ("~" flyspell-incorrect)
+
+     ("+"
+      (:strike-through t)))))
+
+
+
+
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
