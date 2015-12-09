@@ -216,7 +216,7 @@ layers configuration."
 
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
   (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
-  (org-babel-load-file "~/Dropbox/emacs/prelude/personal/appearance-jay-custom-functions.org")
+(org-babel-load-file "/Users/jay/Dropbox/emacs/prelude/personal/fonts-and-themes.org")
   (load "/Users/jay/Dropbox/emacs/prelude/core/prelude-core.el")
   (load "/Users/jay/Dropbox/emacs/prelude/personal/skeletons.el")
   (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
