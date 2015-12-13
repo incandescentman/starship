@@ -275,7 +275,8 @@ layers configuration."
         (quote
          ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
 
-  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿"))
+  (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode 
+;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
   (load "/Users/jay/Dropbox/emacs/prelude/personal/gnugol.el")
   (require 'gnugol)
