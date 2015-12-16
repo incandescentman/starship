@@ -20,19 +20,18 @@ dotspacemacs-configuration-layer-path '("~/Dropbox/emacs/spacemacs/private/jay/"
      ;; --------------------------------------------------------
      auto-completion
      ;; better-defaults
-     git
-     org
+       org
      osx
      xkcd
      smex
      emacs-lisp
      ;;      markdown
-     git
-     github
-     gnus
+;;     git
+;;     github
+;;     gnus
      ;;      version-control
      ;;     latex
-     fasd
+;; fasd
 ;;     search-engine
      ;;     html
      shell
@@ -41,10 +40,10 @@ dotspacemacs-configuration-layer-path '("~/Dropbox/emacs/spacemacs/private/jay/"
 
      ;; syntax-checking
      jay
-     javascript
+ ;;    javascript
 
-     floobits
-     deft
+;;     floobits
+ ;;    deft
      chrome
      themes-megapack
      ibuffer
