@@ -8,7 +8,7 @@
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
 ;;   dotspacemacs-configuration-layer-path '("/Users/jay/starship/jay")
-dotspacemacs-configuration-layer-path '("~/Dropbox/emacs/spacemacs/private/jay/")
+dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -196,7 +196,7 @@ layers configuration."
           (height . 42) ; lines
           ))
 
-(setq yas-snippet-dirs '("/Users/jay/Dropbox/emacs/interesting-snippets/" "~/Dropbox/emacs/snippets"))
+(setq yas-snippet-dirs '("/Users/jay/emacs/interesting-snippets/" "~/emacs/snippets"))
 
 
   ;; automatically display any prefix
@@ -213,19 +213,19 @@ layers configuration."
    ))
 
 
-  (org-babel-load-file "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")
-  (org-babel-load-file "~/Dropbox/emacs/prelude/personal/shared-functions.org")
-(org-babel-load-file "/Users/jay/Dropbox/emacs/prelude/personal/fonts-and-themes.org")
-  (load "/Users/jay/Dropbox/emacs/prelude/core/prelude-core.el")
-  (load "/Users/jay/Dropbox/emacs/prelude/personal/skeletons.el")
-  (load "/Users/jay/Dropbox/emacs/prelude/modules/prelude-key-chord.el")
+  (org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
+  (org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
+(org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
+  (load "/Users/jay/emacs/prelude/core/prelude-core.el")
+  (load "/Users/jay/emacs/prelude/personal/skeletons.el")
+  (load "/Users/jay/emacs/prelude/modules/prelude-key-chord.el")
   (load "/Users/jay/gnulisp/book-functions.el")
   (load "/Users/jay/gnulisp/reveal-in-finder.el")
-(load "/Users/jay/Dropbox/emacs/prelude/personal/jay-osx.el")
-(load "/Users/jay/Dropbox/emacs/prelude/personal/poetry_JD.el")
-(load "/Users/jay/Dropbox/emacs/prelude/personal/define-word.el")
-(load "/Users/jay/Dropbox/emacs/prelude/personal/searchlink/searchlink.el")
-;; (load "/Users/jay/Dropbox/emacs/prelude/personal/ivy-smex.el")
+(load "/Users/jay/emacs/prelude/personal/jay-osx.el")
+(load "/Users/jay/emacs/prelude/personal/poetry_JD.el")
+(load "/Users/jay/emacs/prelude/personal/define-word.el")
+(load "/Users/jay/emacs/prelude/personal/searchlink/searchlink.el")
+;; (load "/Users/jay/emacs/prelude/personal/ivy-smex.el")
 
 
 
@@ -272,12 +272,12 @@ layers configuration."
 
   (setq org-agenda-files
         (quote
-         ("~/Dropbox/writing/notationaldata/accountability.org" "~/Dropbox/emacs/prelude/personal/gnu-emacs-startup.org")))
+         ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
 
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode 
 ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
-  (load "/Users/jay/Dropbox/emacs/prelude/personal/gnugol.el")
+  (load "/Users/jay/emacs/prelude/personal/gnugol.el")
   (require 'gnugol)
   (require 'reveal-in-finder)
 
