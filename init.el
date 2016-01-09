@@ -25,6 +25,7 @@ dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
      xkcd
      smex
      emacs-lisp
+     spacemacs-ivy
      ;;      markdown
 ;;     git
 ;;     github
