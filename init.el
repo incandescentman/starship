@@ -25,7 +25,7 @@ dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
      xkcd
      smex
      emacs-lisp
-     spacemacs-ivy
+;;     spacemacs-ivy
      ;;      markdown
 ;;     git
 ;;     github
@@ -173,7 +173,7 @@ before layers configuration."
    )
   ;; User initialization goes here
 (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
-  (normal-top-level-add-subdirs-to-load-path)) 
+  (normal-top-level-add-subdirs-to-load-path))
 (require 'mu4e)
 
 ;;
@@ -185,7 +185,7 @@ before layers configuration."
 layers configuration."
 
   (require 'package)
-  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t) 
+  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
   (package-initialize)
 
   (setq vc-follow-symlinks t)
@@ -207,11 +207,11 @@ layers configuration."
   ;; enable python
 (org-babel-do-load-languages
  'org-babel-load-languages
-  '( (perl . t)         
+  '( (perl . t)
      (ruby . t)
      (sh . t)
      (python . t)
-     (emacs-lisp . t)   
+     (emacs-lisp . t)
    ))
 
 
@@ -267,16 +267,16 @@ layers configuration."
 
   (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
 
-  (setq helm-echo-input-in-header-line nil) 
+  (setq helm-echo-input-in-header-line nil)
 
   (add-hook 'helm-after-initialize-hook
-            #'(lambda () (setq helm-echo-input-in-header-line nil))) 
+            #'(lambda () (setq helm-echo-input-in-header-line nil)))
 
   (setq org-agenda-files
         (quote
          ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
 
-  (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode 
+  (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
 ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
   (load "/Users/jay/emacs/prelude/personal/gnugol.el")
@@ -351,4 +351,3 @@ layers configuration."
   )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-

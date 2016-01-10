@@ -16,7 +16,7 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download tiny imenu-list fountain-mode stripe-buffer mu4e-maildirs-extension notmuch peg nm zone  project-explorer discover-my-major which-key org-vcard unfill swiper highlight-thing recentf wrap-region graphviz-dot-mode expand-region god-mode bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode ag))
+magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights yasnippet zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download tiny imenu-list fountain-mode stripe-buffer mu4e-maildirs-extension notmuch peg nm zone  project-explorer discover-my-major which-key org-vcard unfill swiper highlight-thing recentf wrap-region graphviz-dot-mode expand-region god-mode bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode ag scratch))
 
 
 
@@ -116,6 +116,8 @@ adaptive-wrap
 (defun jay/init-fuzzy () (use-package fuzzy))
 (defun jay/init-command-log-mode () (use-package command-log-mode))
 (defun jay/init-ag () (use-package ag))
+
+(defun jay/init-scratch () (use-package scratch))
 
 
 
