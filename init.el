@@ -34,7 +34,8 @@ dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
      ;;     latex
 ;; fasd
 ;;     search-engine
-html
+     html
+     mu4e
      shell
      shell-scripts
 ;;     spotify
@@ -352,4 +353,3 @@ layers configuration."
 
   )
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
