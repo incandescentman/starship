@@ -56,6 +56,7 @@ dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
                                     ;; vi-tilde-fringe
                                     company
 ws-butler
+adaptive-wrap
                                     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -347,9 +348,5 @@ layers configuration."
       (:strike-through t)))))
 
 
-
-
-
-
-  )
+)
 
