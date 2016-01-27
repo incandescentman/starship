@@ -42,7 +42,10 @@ dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
 
      ;; syntax-checking
      jay
- ;;    javascript
+     speed-reading
+     emoji
+     typography
+     ;;    javascript
 
 ;;     floobits
  ;;    deft
@@ -346,6 +349,16 @@ layers configuration."
 
      ("+"
       (:strike-through t)))))
+
+
+;; don't show vi-tilde indicators on empty lines
+(setq-default indicate-empty-lines nil) 
+(setq indicate-empty-lines nil)
+
+
+
+(when (version<= "25" emacs-version)
+  (add-hook 'text-mode-hook #'tildify-mode)) 
 
 
 )
