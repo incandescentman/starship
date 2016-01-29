@@ -43,7 +43,6 @@ dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
      ;; syntax-checking
      jay
      speed-reading
-     emoji
      typography
      ;;    javascript
 
