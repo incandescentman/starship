@@ -24,8 +24,8 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
 
-;;     spacemacs-helm
-spacemacs-ivy
+    spacemacs-helm
+;; spacemacs-ivy
 
 auto-completion
      ;; better-defaults
@@ -285,7 +285,23 @@ in `dotspacemacs/user-config'."
           (height . 42) ; lines
           ))
 
+(org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
+
 (setq yas-snippet-dirs '("/Users/jay/emacs/interesting-snippets/" "~/emacs/snippets"))
+
+(org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
+
+(org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
+(load "/Users/jay/emacs/prelude/core/prelude-core.el")
+(load "/Users/jay/emacs/prelude/personal/skeletons.el")
+(load "/Users/jay/emacs/prelude/modules/prelude-key-chord.el")
+(load "/Users/jay/gnulisp/book-functions.el")
+(load "/Users/jay/gnulisp/reveal-in-finder.el")
+(load "/Users/jay/emacs/prelude/personal/jay-osx.el")
+(load "/Users/jay/emacs/prelude/personal/poetry_JD.el")
+(load "/Users/jay/emacs/prelude/personal/define-word.el")
+(load "/Users/jay/emacs/prelude/personal/searchlink/searchlink.el")
+;; (load "/Users/jay/emacs/prelude/personal/ivy-smex.el")
 
 
   ;; automatically display any prefix
@@ -300,7 +316,7 @@ in `dotspacemacs/user-config'."
 (autopair-global-mode -1)
 
 
-  (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
+;;  (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
 
   (setq helm-echo-input-in-header-line nil)
 
@@ -375,13 +391,6 @@ in `dotspacemacs/user-config'."
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration. You are free to put any user code."
-  )
-
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
-
-
-                                        ; move this up
 (setq org-emphasis-alist
       (quote
        (("*" bold)
@@ -448,22 +457,16 @@ layers configuration. You are free to put any user code."
        (define-key org-mode-map (kbd "<C-return>") 'return-insert-blank-line-before)
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
        (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
-       (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
+     (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
 ))
 
-(org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
-(org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
-(org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
-(load "/Users/jay/emacs/prelude/core/prelude-core.el")
-(load "/Users/jay/emacs/prelude/personal/skeletons.el")
-(load "/Users/jay/emacs/prelude/modules/prelude-key-chord.el")
-(load "/Users/jay/gnulisp/book-functions.el")
-(load "/Users/jay/gnulisp/reveal-in-finder.el")
-(load "/Users/jay/emacs/prelude/personal/jay-osx.el")
-(load "/Users/jay/emacs/prelude/personal/poetry_JD.el")
-(load "/Users/jay/emacs/prelude/personal/define-word.el")
-(load "/Users/jay/emacs/prelude/personal/searchlink/searchlink.el")
-;; (load "/Users/jay/emacs/prelude/personal/ivy-smex.el")
 
+
+
+
+  )
+
+;; Do not write anything past this comment. This is where Emacs will
+;; auto-generate custom variable definitions.
 
 
