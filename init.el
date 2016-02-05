@@ -296,9 +296,6 @@ layers configuration."
   (toggle-fullscreen)
   (menu-bar-mode -1)
 (org-mode)
-(custom-set-faces
-'(bold ((t (:inherit font-lock-warning-face :weight bold))))
-'(org-link ((t (:underline nil)))))
 
 (toggle-menu-bar-mode-from-frame)
 
@@ -353,6 +350,11 @@ layers configuration."
 ;; don't show vi-tilde indicators on empty lines
 (setq-default indicate-empty-lines nil) 
 (setq indicate-empty-lines nil)
+
+(custom-set-faces
+ '(bold ((t (:inherit font-lock-warning-face :weight bold :foreground "red"))))
+
+'(org-link ((t (:underline nil)))))
 
 
 
