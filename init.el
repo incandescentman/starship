@@ -362,6 +362,8 @@ layers configuration."
   (add-hook 'text-mode-hook #'tildify-mode)) 
 
 
+(horizontal-cursor)
+
 )
 
 ; ##############################################
