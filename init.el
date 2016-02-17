@@ -262,7 +262,7 @@ layers configuration."
 
        ;; (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content)
        ;; formerly bound to C-return
-       (find-file "~/nd/playful.org")
+       (find-file "~/nd/disciplined.org")
 ;;       (imenu-list-minor-mode)
        ))
 
