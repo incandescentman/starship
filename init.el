@@ -420,7 +420,7 @@ layers configuration."
  '(ido-save-directory-list-file "~/emacs/.savefile/ido.hist")
  '(ido-use-faces t)
  '(ido-use-url-at-point t)
- '(initial-buffer-choice "~/Dropbox/writing/notationaldata/playful.org")
+ '(initial-buffer-choice "~/Dropbox/writing/notationaldata/disciplined.org")
  '(initial-major-mode (quote org-mode))
  '(ivy-extra-directories nil)
  '(ivy-height 10)

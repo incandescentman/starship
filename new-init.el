@@ -420,7 +420,7 @@ layers configuration. You are free to put any user code."
       (quote
        ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
 
-(find-file "~/nd/playful.org")
+(find-file "~/nd/disciplined.org")
 
 ;; enable python
 (setq org-confirm-babel-evaluate nil)
