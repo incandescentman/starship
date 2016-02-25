@@ -13,7 +13,7 @@ values."
    dotspacemacs-distribution 'spacemacs
    ;; List of additional paths where to look for configuration layers.
    ;; Paths must have a trailing slash (i.e. `~/.mycontribs/')
- dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
+   dotspacemacs-configuration-layer-path '("~/emacs/spacemacs/private/jay/")
    ;; List of configuration layers to load. If it is the symbol `all' instead
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
@@ -24,16 +24,16 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
 
-    spacemacs-helm
-;; spacemacs-ivy
+     spacemacs-helm
+     ;; spacemacs-ivy
 
-auto-completion
+     auto-completion
      ;; better-defaults
      emacs-lisp
      ;; git
      ;; markdown
      org
-          osx
+     osx
      xkcd
      smex
 
@@ -41,20 +41,20 @@ auto-completion
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      ;; spell-checking
-syntax-checking
+     syntax-checking
      ;; version-control
      html
      mu4e
      shell
      shell-scripts
-          jay
+     jay
      speed-reading
      emoji
      typography
      ;;    javascript
 
-;;     floobits
- ;;    deft
+     ;;     floobits
+     ;;    deft
      chrome
      themes-megapack
      ibuffer
@@ -66,9 +66,9 @@ syntax-checking
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(
-                                    company
-ws-butler
-adaptive-wrap
+                                      company
+                                      ws-butler
+                                      adaptive-wrap
                                       )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -268,9 +268,21 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
-(let ((default-directory "/usr/local/share/emacs/site-lisp/"))
-  (normal-top-level-add-subdirs-to-load-path))
-(require 'mu4e)
+  )
+
+
+
+
+
+
+(defun dotspacemacs/user-config ()
+  "Configuration function for user code.
+This function is called at the very end of Spacemacs initialization after
+layers configuration. You are free to put any user code."
+
+  (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
+    (normal-top-level-add-subdirs-to-load-path))
+  (require 'mu4e)
 
   (require 'package)
   (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
@@ -285,45 +297,35 @@ in `dotspacemacs/user-config'."
           (height . 42) ; lines
           ))
 
-(org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
+  (org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
 
-(setq yas-snippet-dirs '("/Users/jay/emacs/interesting-snippets/" "~/emacs/snippets"))
+  (setq yas-snippet-dirs '("/Users/jay/emacs/interesting-snippets/" "~/emacs/snippets"))
 
-(org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
+  (org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
 
-(org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
-(load "/Users/jay/emacs/prelude/core/prelude-core.el")
-(load "/Users/jay/emacs/prelude/personal/skeletons.el")
-(load "/Users/jay/emacs/prelude/modules/prelude-key-chord.el")
-(load "/Users/jay/gnulisp/book-functions.el")
-(load "/Users/jay/gnulisp/reveal-in-finder.el")
-(load "/Users/jay/emacs/prelude/personal/jay-osx.el")
-(load "/Users/jay/emacs/prelude/personal/poetry_JD.el")
-(load "/Users/jay/emacs/prelude/personal/define-word.el")
-(load "/Users/jay/emacs/prelude/personal/searchlink/searchlink.el")
-;; (load "/Users/jay/emacs/prelude/personal/ivy-smex.el")
-
+  (org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
+  (load "/Users/jay/emacs/prelude/core/prelude-core.el")
+  (load "/Users/jay/emacs/prelude/personal/skeletons.el")
+  (load "/Users/jay/emacs/prelude/modules/prelude-key-chord.el")
+  (load "/Users/jay/gnulisp/book-functions.el")
+  (load "/Users/jay/gnulisp/reveal-in-finder.el")
+  (load "/Users/jay/emacs/prelude/personal/jay-osx.el")
+  (load "/Users/jay/emacs/prelude/personal/poetry_JD.el")
+  (load "/Users/jay/emacs/prelude/personal/define-word.el")
+  (load "/Users/jay/emacs/prelude/personal/searchlink/searchlink.el")
+  ;; (load "/Users/jay/emacs/prelude/personal/ivy-smex.el")
 
   ;; automatically display any prefix
   (setq guide-key/recursive-key-sequence-flag t)
 
+  (autopair-global-mode -1)
 
-
-
-
-
-
-(autopair-global-mode -1)
-
-
-;;  (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
+  ;;  (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
 
   (setq helm-echo-input-in-header-line nil)
 
   (add-hook 'helm-after-initialize-hook
             #'(lambda () (setq helm-echo-input-in-header-line nil)))
-
-
 
   (load "/Users/jay/emacs/prelude/personal/gnugol.el")
   (require 'gnugol)
@@ -332,108 +334,85 @@ in `dotspacemacs/user-config'."
   (recenter-top-bottom)
   (setq case-fold-search t)
 
-
-(setq company-global-modes '(not org-mode))
+  (setq company-global-modes '(not org-mode))
 
   (toggle-fullscreen)
   (menu-bar-mode -1)
 
-(toggle-menu-bar-mode-from-frame)
+  (toggle-menu-bar-mode-from-frame)
 
-(setq auto-revert-interval 1)
+  (setq auto-revert-interval 1)
 
-(smartparens-global-mode 1)
+  (smartparens-global-mode 1)
 
-
- (add-hook 'ido-setup-hook (lambda ()
+  (add-hook 'ido-setup-hook (lambda ()
                               (define-key ido-completion-map (kbd "<left>") 'ido-prev-match)
                               (define-key ido-completion-map (kbd "<right>") 'ido-next-match)
-) t)
+                              ) t)
 
+  (defadvice load-theme (before theme-dont-propagate activate)
+    (mapcar #'disable-theme custom-enabled-themes))
 
+  ;; if Emacs is running in terminal
+  (if (is-in-terminal)
+      (iterm-mode)
+    ;; (load-theme 'zenburn)
+    (org-mode)
+    )
 
-(defadvice load-theme (before theme-dont-propagate activate)
- (mapcar #'disable-theme custom-enabled-themes))
+  (iterm-mode)
 
+  (setq global-auto-revert-mode 1)
 
-;; if Emacs is running in terminal
-(if (is-in-terminal)
-(iterm-mode)
-;; (load-theme 'zenburn)
-(org-mode)
-)
+  (leuven)
 
-(iterm-mode)
+  ;; don't show vi-tilde indicators on empty lines
+  (setq-default indicate-empty-lines nil) 
+  (setq indicate-empty-lines nil)
+  (when (version<= "25" emacs-version)
+    (add-hook 'text-mode-hook #'tildify-mode)) 
 
+  (setq org-emphasis-alist
+        (quote
+         (("*" bold)
+          ("/" italic)
+          ("_" underline)
+          ("=" org-code verbatim)
+          ("~" flyspell-incorrect)
 
+          ("+"
+           (:strike-through t)))))
 
-(setq global-auto-revert-mode 1)
+  (setq org-adapt-indentation nil)
 
-(leuven)
+  (menu-bar-mode -1)
 
+  (setq org-hide-leading-stars nil)
 
+  (org-mode)
+  (custom-set-faces
+   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
+   '(org-link ((t (:underline nil)))))
 
-;; don't show vi-tilde indicators on empty lines
-(setq-default indicate-empty-lines nil) 
-(setq indicate-empty-lines nil)
-(when (version<= "25" emacs-version)
-  (add-hook 'text-mode-hook #'tildify-mode)) 
+  (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
+  ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
+  (setq org-agenda-files
+        (quote
+         ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
 
-)
+  (find-file "~/nd/disciplined.org")
 
-
-
-
-
-
-(defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-layers configuration. You are free to put any user code."
-(setq org-emphasis-alist
-      (quote
-       (("*" bold)
-        ("/" italic)
-        ("_" underline)
-        ("=" org-code verbatim)
-        ("~" flyspell-incorrect)
-
-        ("+"
-         (:strike-through t)))))
-
-(setq org-adapt-indentation nil)
-
-(menu-bar-mode -1)
-
-(setq org-hide-leading-stars nil)
-
-(org-mode)
-(custom-set-faces
- '(bold ((t (:inherit font-lock-warning-face :weight bold))))
- '(org-link ((t (:underline nil)))))
-
-(setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
-;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
-
-(setq org-agenda-files
-      (quote
-       ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
-
-(find-file "~/nd/disciplined.org")
-
-;; enable python
-(setq org-confirm-babel-evaluate nil)
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '( (perl . t)
-    (ruby . t)
-    (sh . t)
-    (python . t)
-    (emacs-lisp . t)
-    ))
-
-
+  ;; enable python
+  (setq org-confirm-babel-evaluate nil)
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '( (perl . t)
+      (ruby . t)
+      (sh . t)
+      (python . t)
+      (emacs-lisp . t)
+      ))
 
   ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
   ;; I've been wanting to do this for so long. :-)
@@ -457,13 +436,8 @@ layers configuration. You are free to put any user code."
        (define-key org-mode-map (kbd "<C-return>") 'return-insert-blank-line-before)
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
        (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
-     (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
-))
-
-
-
-
-
+       (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
+       ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
