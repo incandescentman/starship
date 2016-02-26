@@ -66,9 +66,10 @@ values."
    dotspacemacs-additional-packages '(
 )
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '(                          company
-                                      ws-butler
-                                      adaptive-wrap
+   dotspacemacs-excluded-packages '(
+                                    company
+                                    ws-butler
+                                    adaptive-wrap
             )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -266,6 +267,11 @@ values."
 It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
+
+  ;; tramp fix
+(setq tramp-ssh-controlmaster-options
+      "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
+
   )
 
 
