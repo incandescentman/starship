@@ -123,7 +123,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(leuven
+   dotspacemacs-themes '(zenburn
+                         leuven
                          spacemacs-dark
                          spacemacs-light
                          solarized-light
@@ -368,7 +369,6 @@ layers configuration. You are free to put any user code."
 
   (setq global-auto-revert-mode 1)
 
-  (leuven)
 
   ;; don't show vi-tilde indicators on empty lines
   (setq-default indicate-empty-lines nil) 
@@ -395,7 +395,7 @@ layers configuration. You are free to put any user code."
 
   (org-mode)
   (custom-set-faces
-   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
+   '(bold ((t (:inherit font-lock-warning-face :weight bold :foreground "red"))))
    '(org-link ((t (:underline nil)))))
 
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
