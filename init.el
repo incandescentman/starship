@@ -123,7 +123,8 @@ values."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(zenburn
+   dotspacemacs-themes '(
+                         ;; zenburn
                          leuven
                          spacemacs-dark
                          spacemacs-light
@@ -390,12 +391,13 @@ layers configuration. You are free to put any user code."
   (setq org-adapt-indentation nil)
 
   (menu-bar-mode -1)
+(spacemacs/toggle-fringe-off)
 
   (setq org-hide-leading-stars nil)
 
-  (org-mode)
-  (custom-set-faces
-   '(bold ((t (:inherit font-lock-warning-face :weight bold :foreground "red"))))
+(custom-set-faces
+;;   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
+'(bold ((t (:inherit diredp-write-priv :weight bold))))
    '(org-link ((t (:underline nil)))))
 
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
