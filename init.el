@@ -390,7 +390,7 @@ layers configuration. You are free to put any user code."
 
 (custom-set-faces
 ;;   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
-'(bold ((t (:inherit diredp-write-priv :weight bold))))
+'(bold ((t (:inherit custom-group-tag-1 :weight bold :foreground "red"))))
    '(org-link ((t (:underline nil)))))
 
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
