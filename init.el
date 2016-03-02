@@ -271,15 +271,8 @@ any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
 
   ;; tramp fix
-(setq tramp-ssh-controlmaster-options
-      "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
-
+(setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
   )
-
-
-
-
-
 
 (defun dotspacemacs/user-config ()
   "Configuration function for user code.
