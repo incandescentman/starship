@@ -49,7 +49,7 @@ values."
      shell-scripts
      jay
      speed-reading
-     emoji
+;;     emoji
      typography
      ;;    javascript
 
