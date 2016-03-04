@@ -305,7 +305,7 @@ layers configuration. You are free to put any user code."
   (org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
   (load "/Users/jay/emacs/prelude/core/prelude-core.el")
   (load "/Users/jay/emacs/prelude/personal/skeletons.el")
-  (load "/Users/jay/emacs/prelude/modules/prelude-key-chord.el")
+  (load "/Users/jay/emacs/prelude/personal/prelude-key-chord.el")
   (load "/Users/jay/gnulisp/book-functions.el")
   (load "/Users/jay/gnulisp/reveal-in-finder.el")
   (load "/Users/jay/emacs/prelude/personal/jay-osx.el")
@@ -313,6 +313,8 @@ layers configuration. You are free to put any user code."
   (load "/Users/jay/emacs/prelude/personal/define-word.el")
   (load "/Users/jay/emacs/prelude/personal/searchlink/searchlink.el")
   ;; (load "/Users/jay/emacs/prelude/personal/ivy-smex.el")
+  (load "/Users/jay/emacs/prelude/personal/emacs_friends.el")
+
 
   ;; automatically display any prefix
   (setq guide-key/recursive-key-sequence-flag t)
