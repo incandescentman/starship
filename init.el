@@ -381,6 +381,11 @@ layers configuration. You are free to put any user code."
           ("+"
            (:strike-through t)))))
 
+  (setq org-agenda-files
+        (quote
+         ("~/Dropbox/writing/notationaldata/accountability.org" "/Users/jay/Dropbox/writing/notationaldata/therapy/act-goals.txt")))
+
+
   (setq org-adapt-indentation nil)
 
   (menu-bar-mode -1)
@@ -396,9 +401,6 @@ layers configuration. You are free to put any user code."
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
   ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
-  (setq org-agenda-files
-        (quote
-         ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
 
   (find-file "~/nd/disciplined.org")
 
@@ -438,6 +440,8 @@ layers configuration. You are free to put any user code."
        (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
        ))
   )
+
+
 
 ;;
 ;;
