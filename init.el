@@ -270,8 +270,6 @@ It is called immediately after `dotspacemacs/init'.  You are free to put almost
 any user code here.  The exception is org related code, which should be placed
 in `dotspacemacs/user-config'."
 
-  ;; tramp fix
-(setq tramp-ssh-controlmaster-options "-o ControlMaster=auto -o ControlPath='tramp.%%C' -o ControlPersist=no")
   )
 
 (defun dotspacemacs/user-config ()
@@ -416,6 +414,9 @@ layers configuration. You are free to put any user code."
       (python . t)
       (emacs-lisp . t)
       ))
+
+
+(setq exec-path-from-shell-debug t)
 
   ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
   ;; I've been wanting to do this for so long. :-)
