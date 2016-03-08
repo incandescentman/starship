@@ -416,7 +416,13 @@ layers configuration. You are free to put any user code."
       ))
 
 
-(setq exec-path-from-shell-debug t)
+;; disable smooth scrolling
+  (setq scroll-step 1)
+(setq scroll-conservatively 10000)
+(setq auto-window-vscroll nil)
+;;
+
+
 
   ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
   ;; I've been wanting to do this for so long. :-)
