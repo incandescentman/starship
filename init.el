@@ -36,7 +36,7 @@ values."
      osx
      xkcd
      smex
-     pdf-tools
+;;     pdf-tools
 
      ;; (shell :variables
      ;;        shell-default-height 30
