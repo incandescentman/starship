@@ -284,9 +284,10 @@ layers configuration. You are free to put any user code."
     (normal-top-level-add-subdirs-to-load-path))
   (require 'mu4e)
 
-  (require 'package)
-  (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
-  (package-initialize)
+  ;; (require 'package)
+  ;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
+  ;; (package-initialize)
+  ;; -----------------------------THIS EXISTS IN DEFAULT SPACEMACS config
 
   (setq vc-follow-symlinks t)
   (setq global-flyspell-mode t)
@@ -297,13 +298,22 @@ layers configuration. You are free to put any user code."
           (height . 42) ; lines
           ))
 
-  (org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
-
   (setq yas-snippet-dirs '("/Users/jay/emacs/interesting-snippets/" "~/emacs/snippets"))
 
-  (org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
+  ;; ORG-BABEL: enable python, ruby, perl, sh, emacs-lisp
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '( (perl . t)
+      (ruby . t)
+      (sh . t)
+      (python . t)
+      (emacs-lisp . t)
+      ))
 
+  (org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
+  (org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
   (org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
+
   (load "/Users/jay/emacs/prelude/core/prelude-core.el")
   (load "/Users/jay/emacs/prelude/personal/skeletons.el")
   (load "/Users/jay/emacs/prelude/modules/prelude-key-chord.el")
@@ -318,6 +328,36 @@ layers configuration. You are free to put any user code."
   ;; automatically display any prefix
   (setq guide-key/recursive-key-sequence-flag t)
 
+  ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
+  ;; I've been wanting to do this for so long. :-)
+  ;; this works correctly!!
+  (eval-after-load "org"
+    '(progn
+       (define-key org-mode-map (kbd "<M-S-left>") nil)
+       (define-key org-mode-map (kbd "<M-S-right>") nil)
+       (define-key org-mode-map (kbd "<M-S-up>") nil)
+       (define-key org-mode-map (kbd "<M-S-down>") nil)
+       (define-key org-mode-map (kbd "<M-left>") nil)
+       (define-key org-mode-map (kbd "<M-right>") nil)
+       (define-key org-mode-map (kbd "<M-right>") nil)
+       (define-key org-mode-map [C-S-right] 'org-shiftmetaright)
+       (define-key org-mode-map [C-S-left] 'org-shiftmetaleft)
+       (define-key org-mode-map [C-right] 'org-metaright)
+       (define-key org-mode-map [C-left] 'org-metaleft)
+       (define-key org-mode-map [C-up] 'org-metaup)
+       (define-key org-mode-map [C-down] 'org-metadown)
+       (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
+       (define-key org-mode-map (kbd "<C-return>") 'return-insert-blank-line-before)
+       (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
+       (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
+       (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
+       ;; (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content)
+       ;; formerly bound to C-return
+       (find-file "~/nd/disciplined.org")
+;;       (imenu-list-minor-mode)
+       (menu-bar-mode -1)
+       ))
+
   (autopair-global-mode -1)
 
   ;;  (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
@@ -326,6 +366,13 @@ layers configuration. You are free to put any user code."
 
   (add-hook 'helm-after-initialize-hook
             #'(lambda () (setq helm-echo-input-in-header-line nil)))
+
+  (setq org-agenda-files
+        (quote
+         ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
+
+  (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
+  ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
   (load "/Users/jay/emacs/prelude/personal/gnugol.el")
   (require 'gnugol)
@@ -342,6 +389,8 @@ layers configuration. You are free to put any user code."
   (toggle-menu-bar-mode-from-frame)
 
   (setq auto-revert-interval 1)
+
+  (setq org-hide-leading-stars nil)
 
   (smartparens-global-mode 1)
 
@@ -367,10 +416,10 @@ layers configuration. You are free to put any user code."
   (leuven)
 
   ;; don't show vi-tilde indicators on empty lines
-  (setq-default indicate-empty-lines nil) 
+  (setq-default indicate-empty-lines nil)
   (setq indicate-empty-lines nil)
   (when (version<= "25" emacs-version)
-    (add-hook 'text-mode-hook #'tildify-mode)) 
+    (add-hook 'text-mode-hook #'tildify-mode))
 
   (setq org-emphasis-alist
         (quote
@@ -385,59 +434,15 @@ layers configuration. You are free to put any user code."
 
   (setq org-adapt-indentation nil)
 
-  (menu-bar-mode -1)
-
-  (setq org-hide-leading-stars nil)
-
-  (org-mode)
   (custom-set-faces
    '(bold ((t (:inherit font-lock-warning-face :weight bold))))
    '(org-link ((t (:underline nil)))))
 
-  (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
-  ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
-
-  (setq org-agenda-files
-        (quote
-         ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
+  (horizontal-cursor)
 
   (find-file "~/nd/disciplined.org")
 
-  ;; enable python
-  (setq org-confirm-babel-evaluate nil)
-  (org-babel-do-load-languages
-   'org-babel-load-languages
-   '( (perl . t)
-      (ruby . t)
-      (sh . t)
-      (python . t)
-      (emacs-lisp . t)
-      ))
 
-  ;; use OSX standard keybindings for navigating word-by-word and selecting whole words at a time
-  ;; I've been wanting to do this for so long. :-)
-  ;; this works correctly!!
-  (eval-after-load "org"
-    '(progn
-       (define-key org-mode-map (kbd "<M-S-left>") nil)
-       (define-key org-mode-map (kbd "<M-S-right>") nil)
-       (define-key org-mode-map (kbd "<M-S-up>") nil)
-       (define-key org-mode-map (kbd "<M-S-down>") nil)
-       (define-key org-mode-map (kbd "<M-left>") nil)
-       (define-key org-mode-map (kbd "<M-right>") nil)
-       (define-key org-mode-map (kbd "<M-right>") nil)
-       (define-key org-mode-map [C-S-right] 'org-shiftmetaright)
-       (define-key org-mode-map [C-S-left] 'org-shiftmetaleft)
-       (define-key org-mode-map [C-right] 'org-metaright)
-       (define-key org-mode-map [C-left] 'org-metaleft)
-       (define-key org-mode-map [C-up] 'org-metaup)
-       (define-key org-mode-map [C-down] 'org-metadown)
-       (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
-       (define-key org-mode-map (kbd "<C-return>") 'return-insert-blank-line-before)
-       (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
-       (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
-       (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
-       ))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
