@@ -26,7 +26,6 @@ values."
 
      spacemacs-helm
      ;; spacemacs-ivy
-
      auto-completion
      ;; better-defaults
      emacs-lisp
@@ -34,7 +33,7 @@ values."
      ;; markdown
      org
      osx
-     xkcd
+  ;;   xkcd
      smex
 
      ;; (shell :variables
@@ -48,7 +47,7 @@ values."
      shell
      shell-scripts
      jay
-     speed-reading
+;;     speed-reading
 ;;     emoji
      typography
      ;;    javascript

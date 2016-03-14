@@ -16,7 +16,7 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro edit-server key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize edit-server openwith wc-mode dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download tiny imenu-list stripe-buffer mu4e-maildirs-extension notmuch peg nm zone  project-explorer discover-my-major which-key org-vcard unfill highlight-thing recentf wrap-region graphviz-dot-mode expand-region god-mode bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode ag scratch ox-twbs caps-lock dired+ cheatsheet))
+magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize openwith wc-mode dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download tiny imenu-list stripe-buffer mu4e-maildirs-extension notmuch peg nm zone  project-explorer discover-my-major which-key org-vcard unfill highlight-thing recentf wrap-region graphviz-dot-mode expand-region god-mode bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode ag scratch ox-twbs caps-lock dired+ cheatsheet))
 
 
 
@@ -39,7 +39,7 @@ adaptive-wrap
 (defun jay/init-buffer-stack () (use-package buffer-stack))
 (defun jay/init-org-fstree () (use-package org-fstree))
 (defun jay/init-auto-capitalize () (use-package auto-capitalize))
-(defun jay/init-edit-server () (use-package edit-server))
+;; (defun jay/init-edit-server () (use-package edit-server))
 (defun jay/init-ido-hacks () (use-package ido-hacks))
 (defun jay/init-openwith () (use-package openwith))
 (defun jay/init-wc-mode () (use-package wc-mode))
