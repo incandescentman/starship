@@ -16,7 +16,7 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize org-pomodoro key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize openwith wc-mode dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t w3m multiple-cursors xah-replace-pairs org-download tiny imenu-list stripe-buffer mu4e-maildirs-extension notmuch peg nm zone  project-explorer discover-my-major which-key org-vcard unfill highlight-thing recentf wrap-region graphviz-dot-mode expand-region god-mode bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode ag scratch ox-twbs caps-lock dired+ cheatsheet))
+magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize openwith wc-mode dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t w3m multiple-cursors xah-replace-pairs tiny imenu-list stripe-buffer mu4e-maildirs-extension notmuch peg nm zone  project-explorer discover-my-major which-key unfill highlight-thing recentf wrap-region graphviz-dot-mode expand-region god-mode bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode ag scratch ox-twbs caps-lock dired+ cheatsheet))
 
 
 
@@ -67,7 +67,7 @@ adaptive-wrap
 
 (defun jay/init-xah-replace-pairs () (use-package xah-replace-pairs))
 
-(defun jay/init-org-download () (use-package org-download))
+;; (defun jay/init-org-download () (use-package org-download))
 
 (defun jay/init-gist () (use-package gist))
 
@@ -90,7 +90,7 @@ adaptive-wrap
 
 (defun jay/init-direx () (use-package direx))
 
-(defun jay/init-org-vcard () (use-package org-vcard))
+;; (defun jay/init-org-vcard () (use-package org-vcard))
 
 (defun jay/init-unfill() (use-package unfill))
 ;; (defun jay/init-swiper() (use-package swiper))
@@ -121,7 +121,7 @@ adaptive-wrap
 (defun jay/init-ox-twbs () (use-package ox-twbs))
 (defun jay/init-caps-lock () (use-package caps-lock))
 (defun jay/init-dired+ () (use-package dired+))
-(defun jay/init-org-pomodoro () (use-package org-pomodoro))
+;;(defun jay/init-org-pomodoro () (use-package org-pomodoro))
 
 
 (defun jay/init-cheatsheet () (use-package cheatsheet))
