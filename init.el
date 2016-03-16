@@ -362,9 +362,6 @@ layers configuration. You are free to put any user code."
   (add-hook 'helm-after-initialize-hook
             #'(lambda () (setq helm-echo-input-in-header-line nil)))
 
-  (setq org-agenda-files
-        (quote
-         ("~/Dropbox/writing/notationaldata/accountability.org" "~/emacs/prelude/personal/gnu-emacs-startup.org")))
 
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
   ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
@@ -426,9 +423,7 @@ layers configuration. You are free to put any user code."
           ("+"
            (:strike-through t)))))
 
-  (setq org-agenda-files
-        (quote
-         ("~/Dropbox/writing/notationaldata/accountability.org" "/Users/jay/Dropbox/writing/notationaldata/therapy/act-goals.txt")))
+;;  (setq org-agenda-files (quote ("~/Dropbox/writing/notationaldata/accountability.org" "/Users/jay/Dropbox/writing/notationaldata/therapy/act-goals.txt")))
 
 
   (setq org-adapt-indentation nil)
