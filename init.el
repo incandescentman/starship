@@ -435,7 +435,7 @@ layers configuration. You are free to put any user code."
 
 (custom-set-faces
 ;;   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
-'(bold ((t (:inherit custom-group-tag-1 :weight bold :foreground "red"))))
+'(bold ((t (:inherit custom-group-tag-1 :weight bold :foreground "red" :height 0.9))))
    '(org-link ((t (:underline nil)))))
 
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
@@ -481,4 +481,3 @@ layers configuration. You are free to put any user code."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
-
