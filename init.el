@@ -346,8 +346,10 @@ layers configuration. You are free to put any user code."
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
        (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
        (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
-       (define-key org-mode-map (kbd "<C-up>") '(lambda () (previous-line 5)))
-       (define-key org-mode-map (kbd "<C-down>") '(lambda () (next-line 5)))
+;; (define-key org-mode-map (kbd "<M-up>") 'up-by-degrees)
+;; (define-key org-mode-map (kbd "<M-down>") 'down-by-degrees)
+       (define-key key-minor-mode-map (kbd "<M-down>") 'down-by-degrees)
+       (define-key key-minor-mode-map (kbd "<M-up>") 'up-by-degrees)
 
        ;; (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content)
        ;; formerly bound to C-return
