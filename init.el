@@ -123,7 +123,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         ;; zenburn
+                         zenburn
                          leuven
                          spacemacs-dark
                          spacemacs-light
@@ -319,6 +319,7 @@ layers configuration. You are free to put any user code."
   (load "/Users/jay/emacs/prelude/personal/searchlink/searchlink.el")
   ;; (load "/Users/jay/emacs/prelude/personal/ivy-smex.el")
   (load "/Users/jay/emacs/prelude/personal/emacs_friends.el")
+  (load "/Users/jay/emacs/prelude/personal/email.el")
 
   ;; automatically display any prefix
   (setq guide-key/recursive-key-sequence-flag t)
@@ -440,8 +441,11 @@ layers configuration. You are free to put any user code."
 
 (custom-set-faces
 ;;   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
-'(bold ((t (:inherit custom-group-tag-1 :weight bold :foreground "red" :height 0.9))))
+'(bold ((t (:family "Sans Serif" :weight bold :foreground "red" :height 1.1))))
+'(italic ((t (:foreground "#1F8DD6" :family "Garamond" :slant italic :height 1.3))))
    '(org-link ((t (:underline nil)))))
+
+
 
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
   ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
@@ -485,6 +489,11 @@ layers configuration. You are free to put any user code."
   )
 
 
-
+;; theend
+;; 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+;;
+;;
+
+
