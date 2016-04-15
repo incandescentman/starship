@@ -485,6 +485,8 @@ layers configuration. You are free to put any user code."
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
        (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
        (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
+       (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-backward-sentence)
+(define-key key-minor-mode-map (kbd "<C-M-right>") 'smart-forward-sentence)
        ))
   )
 
