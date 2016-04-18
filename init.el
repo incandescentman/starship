@@ -354,7 +354,7 @@ layers configuration. You are free to put any user code."
 
        ;; (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content)
        ;; formerly bound to C-return
-       (find-file "~/nd/disciplined.org")
+       (find-file "~/nd/warm.org")
 ;;       (imenu-list-minor-mode)
        (menu-bar-mode -1)
        ))
@@ -450,7 +450,7 @@ layers configuration. You are free to put any user code."
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
   ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
-  (find-file "~/nd/disciplined.org")
+  (find-file "~/nd/warm.org")
 
 
 
