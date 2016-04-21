@@ -441,8 +441,8 @@ layers configuration. You are free to put any user code."
 
 (custom-set-faces
 ;;   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
-'(bold ((t (:family "Sans Serif" :weight bold :foreground "red" :height 1.1))))
-'(italic ((t (:foreground "#1F8DD6" :family "Garamond" :slant italic :height 1.3))))
+'(bold ((t (:family "Sans Serif" :weight bold :height 1.1))))
+'(italic ((t (:family "Garamond" :slant italic :height 1.3))))
    '(org-link ((t (:underline nil)))))
 
 
@@ -488,8 +488,12 @@ layers configuration. You are free to put any user code."
        (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-backward-sentence)
 (define-key key-minor-mode-map (kbd "<C-M-right>") 'smart-forward-sentence)
        ))
-  )
 
+
+(zenburn)
+
+
+)
 
 ;; theend
 ;; 
