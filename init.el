@@ -33,6 +33,7 @@ values."
      ;; markdown
      org
      osx
+     swiper
   ;;   xkcd
      smex
 
