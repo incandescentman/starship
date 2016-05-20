@@ -124,9 +124,9 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         leuven
-                         zenburn
-                         spacemacs-dark
+                         ;; leuven
+;;                         zenburn
+  ;;                       spacemacs-dark
                          spacemacs-light
                          solarized-light
                          solarized-dark
@@ -494,7 +494,7 @@ layers configuration. You are free to put any user code."
 
 
 ;; (zenburn)
-(leuven)
+;; (leuven)
 
 )
 
