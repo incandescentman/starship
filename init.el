@@ -24,7 +24,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
 
-     spacemacs-helm
+     helm
      ;; spacemacs-ivy
      auto-completion
      ;; better-defaults
@@ -33,7 +33,7 @@ values."
      ;; markdown
      org
      osx
-  ;;   xkcd
+     ;;   xkcd
      smex
 
      ;; (shell :variables
