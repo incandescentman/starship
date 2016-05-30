@@ -494,7 +494,7 @@ layers configuration. You are free to put any user code."
 
 ;; (zenburn)
 ;; (leuven)
-
+(spacemacs-light)
 )
 
 ;; theend
