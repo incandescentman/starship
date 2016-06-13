@@ -277,7 +277,7 @@ layers configuration. You are free to put any user code."
 
   (let ((default-directory "/usr/local/share/emacs/site-lisp/"))
     (normal-top-level-add-subdirs-to-load-path))
-  (require 'mu4e)
+  (use-package mu4e)
 
   ;; (require 'package)
   ;; (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/") t)
@@ -375,8 +375,8 @@ layers configuration. You are free to put any user code."
   ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
   (load "/Users/jay/emacs/prelude/personal/gnugol.el")
-  (require 'gnugol)
-  (require 'reveal-in-finder)
+  (use-package gnugol)
+  (use-package reveal-in-finder)
 
   (recenter-top-bottom)
   (setq case-fold-search t)
