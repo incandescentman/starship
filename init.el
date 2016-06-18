@@ -69,6 +69,7 @@ values."
                                     company
                                     ws-butler
                                     adaptive-wrap
+				    vi-tilde-fringe
             )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -414,12 +415,6 @@ layers configuration. You are free to put any user code."
   (setq global-auto-revert-mode 1)
 
 
-  ;; don't show vi-tilde indicators on empty lines
-  (setq-default indicate-empty-lines nil)
-  (setq indicate-empty-lines nil)
-  (when (version<= "25" emacs-version)
-    (add-hook 'text-mode-hook #'tildify-mode))
-
   (setq org-emphasis-alist
         (quote
          (("*" bold)
@@ -437,7 +432,6 @@ layers configuration. You are free to put any user code."
   (setq org-adapt-indentation nil)
 
   (menu-bar-mode -1)
-(spacemacs/toggle-fringe-off)
 
   (setq org-hide-leading-stars nil)
 
