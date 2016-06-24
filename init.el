@@ -70,6 +70,7 @@ values."
                                     ws-butler
                                     adaptive-wrap
 				    vi-tilde-fringe
+exec-path-from-shell
             )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -124,7 +125,7 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(
-                         ;; leuven
+leuven
 ;;                         zenburn
   ;;                       spacemacs-dark
                          spacemacs-light
@@ -426,7 +427,7 @@ layers configuration. You are free to put any user code."
           ("+"
            (:strike-through t)))))
 
-(setq org-agenda-files (quote ("~/Dropbox/writing/notationaldata/accountability.org" "/Users/jay/Dropbox/writing/book/feb-18/bias.txt")))
+(setq org-agenda-files (quote ("~/Dropbox/writing/notationaldata/accountability.org" "/Users/jay/Dropbox/writing/book/feb-18/bias.txt" "/Users/jay/Dropbox/writing/book/feb-18/bias.txt")))
 
 
   (setq org-adapt-indentation nil)
