@@ -488,8 +488,8 @@ layers configuration. You are free to put any user code."
 
 
 ;; (zenburn)
-;; (leuven)
-(spacemacs-light)
+(leuven)
+;; (spacemacs-light)
 )
 
 ;; theend
@@ -498,5 +498,4 @@ layers configuration. You are free to put any user code."
 ;; auto-generate custom variable definitions.
 ;;
 ;;
-
 
