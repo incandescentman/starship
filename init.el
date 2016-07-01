@@ -39,13 +39,13 @@ values."
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     syntax-checking
+     spell-checking
+  ;;   syntax-checking
      ;; version-control
      html
      mu4e
-     shell
-     shell-scripts
+  ;;   shell
+  ;;   shell-scripts
      jay
 ;;     speed-reading
 ;;     emoji
@@ -70,8 +70,12 @@ values."
                                     ws-butler
                                     adaptive-wrap
 				    vi-tilde-fringe
-exec-path-from-shell
-            )
+            exec-path-from-shell
+
+evil-mode evil-escape evil-local evil-org
+evil-search-highlight-persist evil-surround eyebrowse global-undo-tree-mode
+
+)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'. (default t)
@@ -490,6 +494,11 @@ layers configuration. You are free to put any user code."
 ;; (zenburn)
 (leuven)
 ;; (spacemacs-light)
+
+
+(setq global-auto-complete-mode -1)
+
+
 )
 
 ;; theend
