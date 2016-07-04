@@ -431,7 +431,7 @@ layers configuration. You are free to put any user code."
           ("+"
            (:strike-through t)))))
 
-(setq org-agenda-files (quote ("~/Dropbox/writing/notationaldata/accountability.org" "/Users/jay/Dropbox/writing/book/feb-18/bias.txt" "/Users/jay/Dropbox/writing/book/feb-18/bias.txt")))
+(setq org-agenda-files (quote ("~/Dropbox/writing/notationaldata/accountability.org" "/Users/jay/Dropbox/writing/book/feb-18/0-why-I-wrote-this-book.txt")))
 
 
   (setq org-adapt-indentation nil)
