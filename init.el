@@ -28,35 +28,35 @@ values."
      ;; spacemacs-ivy
      auto-completion
      ;; better-defaults
-     emacs-lisp
+;;      emacs-lisp
      ;; git
      ;; markdown
-     org
-     osx
+org
+;;     osx
      ;;   xkcd
-     smex
+;;     smex
 
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
-     spell-checking
+  ;;   spell-checking
   ;;   syntax-checking
      ;; version-control
-     html
+    ;;  html
      mu4e
   ;;   shell
   ;;   shell-scripts
      jay
 ;;     speed-reading
 ;;     emoji
-     typography
+;;     typography
      ;;    javascript
 
      ;;     floobits
      ;;    deft
-     chrome
+;;     chrome
      themes-megapack
-     ibuffer
+ ;;    ibuffer
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -313,6 +313,7 @@ layers configuration. You are free to put any user code."
 
   (org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
   (org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
+  (org-babel-load-file "~/emacs/prelude/personal/spacemacs-config.org")
   (org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
   (load "/Users/jay/emacs/prelude/core/prelude-core.el")
   (load "/Users/jay/emacs/prelude/personal/skeletons.el")
