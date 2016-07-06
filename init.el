@@ -34,7 +34,7 @@ values."
 org
 ;;     osx
      ;;   xkcd
-;;     smex
+smex
 
      ;; (shell :variables
      ;;        shell-default-height 30
