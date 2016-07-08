@@ -35,7 +35,7 @@ org
 ;;     osx
      ;;   xkcd
 smex
-
+evil
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
@@ -74,7 +74,7 @@ smex
 
 evil-mode evil-escape evil-local evil-org
 evil-search-highlight-persist evil-surround eyebrowse global-undo-tree-mode
-
+evil-unimpaired
 )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
