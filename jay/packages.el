@@ -16,7 +16,7 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize openwith wc-mode dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t w3m multiple-cursors xah-replace-pairs tiny imenu-list stripe-buffer notmuch peg nm zone  project-explorer discover-my-major which-key unfill highlight-thing recentf wrap-region graphviz-dot-mode expand-region god-mode bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode ag scratch ox-twbs caps-lock dired+ cheatsheet scratch-message org-bookmark-heading tabbar selected fastdef dired+ dired-details+))
+magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode scss-mode solarized-theme volatile-highlights zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize key-chord ido-hacks openwith wc-mode discover engine-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc autopair auto-capitalize openwith wc-mode dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t w3m multiple-cursors xah-replace-pairs tiny imenu-list stripe-buffer notmuch peg nm zone  project-explorer discover-my-major which-key unfill highlight-thing recentf wrap-region graphviz-dot-mode expand-region god-mode bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode ag scratch ox-twbs caps-lock dired+ cheatsheet scratch-message org-bookmark-heading tabbar selected fastdef dired+ dired-details+ flyspell-lazy))
 
 
 
@@ -138,6 +138,8 @@ adaptive-wrap
 (defun jay/init-fastdef () (use-package fastdef))
 (defun jay/init-dired+ () (use-package dired+))
 (defun jay/init-dired-details+ () (use-package dired-details+))
+
+(defun jay/init-flyspell-lazy () (use-package flyspell-lazy))
 
 
 

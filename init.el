@@ -499,6 +499,10 @@ layers configuration. You are free to put any user code."
 
 (setq global-auto-complete-mode -1)
 
+(setq recentf-save-file "~/emacs/.savefile/recentf")
+(setq ido-save-directory-list-file "~/emacs/.savefile/ido.hist")
+
+
 
 )
 
