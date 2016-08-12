@@ -2,6 +2,9 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+(setq recentf-save-file "/Users/jay/emacs/starship/.savefile/recentf")
+
+
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -499,8 +502,8 @@ layers configuration. You are free to put any user code."
 
 (setq global-auto-complete-mode -1)
 
-(setq recentf-save-file "~/emacs/.savefile/recentf")
-(setq ido-save-directory-list-file "~/emacs/.savefile/ido.hist")
+(setq ido-save-directory-list-file "/Users/jay/emacs/starship/.savefile/ido.hist")
+(setq recentf-save-file "/Users/jay/emacs/starship/.savefile/recentf")
 
 
 
