@@ -507,6 +507,14 @@ layers configuration. You are free to put any user code."
 
 
 
+  (use-package evil-terminal-cursor-changer
+    :if (not (display-graphic-p))
+    :init (setq evil-visual-state-cursor 'hbar
+                evil-insert-state-cursor 'bar
+                evil-emacs-state-cursor 'hbar))
+
+
+
 )
 
 ;; theend
