@@ -93,7 +93,7 @@ volatile-highlights
 winner-mode-enable
 xterm-mouse-mode
 
-
+highlight-indentation
 )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
@@ -387,7 +387,7 @@ layers configuration. You are free to put any user code."
        (menu-bar-mode -1)
        ))
 
-  (autopair-global-mode -1)
+
 
   ;;  (define-key key-minor-mode-map (kbd "C-c d") 'prelude-duplicate-current-line-or-region)
 
