@@ -78,6 +78,22 @@ evil
 evil-mode evil-escape evil-local evil-org
 evil-search-highlight-persist evil-surround eyebrowse global-undo-tree-mode
 evil-unimpaired
+auto-revert
+
+
+;; didn't work
+auto-encryption-mode
+clean-aiindent-mode
+diff-auto-refine-mode
+electric-indent-mode
+evil-mode
+hl-line-mode
+hs-mode
+volatile-highlights
+winner-mode-enable
+xterm-mouse-mode
+
+
 )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
