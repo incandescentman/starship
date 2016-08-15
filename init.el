@@ -528,6 +528,25 @@ layers configuration. You are free to put any user code."
 
 
 
+  (defvar spacemacs-evil-cursors '(("normal" "DarkGoldenrod2" hbar)
+                                   ("insert" "chartreuse3" (bar . 2))
+                                   ("emacs" "SkyBlue2" hbar)
+                                   ("hybrid" "SkyBlue2" (bar . 2))
+                                   ("replace" "chocolate" (hbar . 2))
+                                   ("evilified" "LightGoldenrod3" hbar)
+                                   ("visual" "gray" (hbar . 2))
+                                   ("motion" "plum3" hbar)
+                                   ("lisp" "HotPink1" hbar)
+                                   ("iedit" "firebrick1" hbar)
+                                   ("iedit-insert" "firebrick1" (bar . 2)))
+    "Colors assigned to evil states with cursor definitions.")
+
+(setq cursor-type 'hbar)
+(setq evil-default-cursor 'hbar)
+
+(add-to-list 'warning-suppress-types '(yasnippet backquote-change))
+
+
 )
 
 ;; theend
