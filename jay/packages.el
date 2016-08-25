@@ -16,7 +16,7 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode solarized-theme zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize ido-hacks openwith wc-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc auto-capitalize openwith dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t multiple-cursors xah-replace-pairs tiny imenu-list stripe-buffer notmuch peg nm zone  project-explorer discover-my-major unfill recentf wrap-region graphviz-dot-mode expand-region bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode scratch ox-twbs caps-lock dired+ cheatsheet scratch-message org-bookmark-heading tabbar fastdef dired+ dired-details+ flyspell-lazy crux paredit key-chord))
+magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode solarized-theme zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize ido-hacks openwith wc-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc auto-capitalize openwith dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti org-mac-link writeroom-mode helm-cmd-t multiple-cursors xah-replace-pairs tiny imenu-list stripe-buffer notmuch peg nm zone  project-explorer discover-my-major unfill recentf wrap-region graphviz-dot-mode expand-region bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode scratch ox-twbs caps-lock dired+ cheatsheet scratch-message org-bookmark-heading tabbar fastdef dired+ dired-details+ flyspell-lazy crux paredit key-chord web-mode))
 
 
 
@@ -145,6 +145,7 @@ adaptive-wrap
 (defun jay/init-crux () (use-package crux))
 
 (defun jay/init-paredit () (use-package paredit))
+(defun jay/init-web-mode () (use-package web-mode))
 
 
 ;;   )
