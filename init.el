@@ -368,17 +368,25 @@ layers configuration. You are free to put any user code."
        (define-key org-mode-map [C-left] 'org-metaleft)
        (define-key org-mode-map [C-up] 'org-metaup)
        (define-key org-mode-map [C-down] 'org-metadown)
+
+     (define-key org-mode-map (kbd "<C-return>") 'return-insert-blank-line-before)
+     (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
+     (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
+     (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
+     (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-backward-sentence)
+     (define-key key-minor-mode-map (kbd "<C-M-right>") 'smart-forward-sentence)
+
+
        (define-key org-mode-map [C-S-return] 'org-insert-todo-heading)
        (define-key org-mode-map (kbd "<C-return>") 'return-insert-blank-line-before)
        (define-key org-mode-map (kbd "<C-S-return>") 'smart-org-insert-todo-heading-dwim)
-       (define-key key-minor-mode-map (kbd "<C-M-right>") 'org-shiftright)
-       (define-key key-minor-mode-map (kbd "<C-M-left>") 'org-shiftleft)
-(define-key key-minor-mode-map (kbd "<M-S-up>") 'scroll-down-command)
-(define-key key-minor-mode-map (kbd "<M-S-down>") 'scroll-up-command)
-       ;; (define-key org-mode-map (kbd "<M-up>") 'up-by-degrees)
-;; (define-key org-mode-map (kbd "<M-down>") 'down-by-degrees)
-       (define-key key-minor-mode-map (kbd "<M-down>") 'down-by-degrees)
-       (define-key key-minor-mode-map (kbd "<M-up>") 'up-by-degrees)
+
+(define-key key-minor-mode-map (kbd "<M-S-up>") 'org-shiftup)
+(define-key key-minor-mode-map (kbd "<M-S-down>") 'org-shiftdown)
+(define-key org-mode-map (kbd "<M-up>") 'up-by-degrees)
+(define-key org-mode-map (kbd "<M-down>") 'down-by-degrees)
+(define-key key-minor-mode-map (kbd "<M-down>") 'down-by-degrees)
+(define-key key-minor-mode-map (kbd "<M-up>") 'up-by-degrees)
 
        ;; (define-key org-mode-map (kbd "needs a binding") 'org-insert-heading-respect-content)
        ;; formerly bound to C-return
