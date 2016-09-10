@@ -2,6 +2,8 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+(setq user-init-file "/Users/jay/emacs/starship/init.el")
+
 (setq recentf-save-file "/Users/jay/emacs/starship/.savefile/recentf")
 
 
@@ -70,7 +72,7 @@ evil
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(
                                     company
-                                    ws-butler
+                ;;                    ws-butler
                                     adaptive-wrap
 				    vi-tilde-fringe
             exec-path-from-shell
