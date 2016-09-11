@@ -471,6 +471,8 @@ layers configuration. You are free to put any user code."
 ;;   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
 '(bold ((t (:family "Sans Serif" :weight bold :height 1.1))))
 '(italic ((t (:family "Garamond" :slant italic :height 1.3))))
+'(org-code ((t (:family "Courier" :height 1.3))))
+
    '(org-link ((t (:underline nil)))))
 
 
