@@ -332,22 +332,22 @@ layers configuration. You are free to put any user code."
       (emacs-lisp . t)
       ))
 
-  (org-babel-load-file "~/emacs/prelude/personal/gnu-emacs-startup.org")
-  (org-babel-load-file "~/emacs/prelude/personal/shared-functions.org")
-  (org-babel-load-file "~/emacs/prelude/personal/spacemacs-config.org")
-  (org-babel-load-file "/Users/jay/emacs/prelude/personal/fonts-and-themes.org")
+  (org-babel-load-file "~/emacs/emacs-settings/gnu-emacs-startup.org")
+  (org-babel-load-file "~/emacs/emacs-settings/shared-functions.org")
+  (org-babel-load-file "~/emacs/emacs-settings/spacemacs-config.org")
+  (org-babel-load-file "/Users/jay/emacs/emacs-settings/fonts-and-themes.org")
   (load "/Users/jay/emacs/prelude/core/prelude-core.el")
-  (load "/Users/jay/emacs/prelude/personal/skeletons.el")
-  (load "/Users/jay/emacs/prelude/personal/prelude-key-chord.el")
+  (load "/Users/jay/emacs/emacs-settings/skeletons.el")
+  (load "/Users/jay/emacs/emacs-settings/prelude-key-chord.el")
   (load "/Users/jay/gnulisp/book-functions.el")
   (load "/Users/jay/gnulisp/reveal-in-finder.el")
-  (load "/Users/jay/emacs/prelude/personal/jay-osx.el")
-  (load "/Users/jay/emacs/prelude/personal/poetry_JD.el")
-  (load "/Users/jay/emacs/prelude/personal/define-word.el")
-  (load "/Users/jay/emacs/prelude/personal/searchlink/searchlink.el")
-  ;; (load "/Users/jay/emacs/prelude/personal/ivy-smex.el")
-  (load "/Users/jay/emacs/prelude/personal/emacs_friends.el")
-  (load "/Users/jay/emacs/prelude/personal/email.el")
+  (load "/Users/jay/emacs/emacs-settings/jay-osx.el")
+  (load "/Users/jay/emacs/emacs-settings/poetry_JD.el")
+  (load "/Users/jay/emacs/emacs-settings/define-word.el")
+  (load "/Users/jay/emacs/emacs-settings/searchlink/searchlink.el")
+  ;; (load "/Users/jay/emacs/emacs-settings/ivy-smex.el")
+  (load "/Users/jay/emacs/emacs-settings/emacs_friends.el")
+  (load "/Users/jay/emacs/emacs-settings/email.el")
 
   ;; automatically display any prefix
   (setq guide-key/recursive-key-sequence-flag t)
@@ -410,7 +410,7 @@ layers configuration. You are free to put any user code."
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
   ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
-  (load "/Users/jay/emacs/prelude/personal/gnugol.el")
+  (load "/Users/jay/emacs/emacs-settings/gnugol.el")
   (use-package gnugol)
   (use-package reveal-in-finder)
 
