@@ -468,13 +468,12 @@ layers configuration. You are free to put any user code."
   (setq org-hide-leading-stars nil)
 
 (custom-set-faces
-;;   '(bold ((t (:inherit font-lock-warning-face :weight bold))))
-'(bold ((t (:family "Sans Serif" :weight bold :height 1.1))))
-'(italic ((t (:family "Garamond" :slant italic :height 1.3))))
- '(flyspell-duplicate ((t (:inherit flyspell-incorrect :underline))))
-'(org-code ((t (:family "Courier" :height 1.3))))
-
-   '(org-link ((t (:underline nil)))))
+ '(bold ((t (:family "Sans Serif" :weight bold :height 1.1))))
+ '(italic ((t (:family "Garamond" :slant italic :height 1.3))))
+ '(flyspell-incorrect ((t (:underline (:style wave :color "red")))))
+ '(flyspell-duplicate ((t (:underline (:style wave :color "red")))))
+ '(org-code ((t (:family "Courier" :height 1.3))))
+ '(org-link ((t (:underline nil)))))
 
 
 
