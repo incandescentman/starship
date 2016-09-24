@@ -537,6 +537,8 @@ layers configuration. You are free to put any user code."
 (add-to-list 'warning-suppress-types '(yasnippet backquote-change))
 
 (horizontal-cursor)
+(scroll-bar-mode 1)
+
 
 )
 
