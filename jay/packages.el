@@ -16,7 +16,82 @@
 jay-packages
 ;; that's the value (it is a list of packages)
 '(
-magit expand-region gist  helm helm-projectile magit markdown-mode auto-complete dired-details+ paredit projectile rainbow-mode solarized-theme zenburn-theme frame-restore frame-cmds org-fstree buffer-stack auto-capitalize ido-hacks openwith wc-mode point-stack palimpsest olivetti smex dired-hacks-utils dired-single sublime-themes cyberpunk-theme popup xml-rpc auto-capitalize openwith dired-sort-menu dired-details+ maxframe olivetti palimpsest olivetti writeroom-mode helm-cmd-t multiple-cursors xah-replace-pairs tiny imenu-list stripe-buffer notmuch peg nm zone  project-explorer discover-my-major unfill recentf wrap-region graphviz-dot-mode expand-region bongo multicolumn rainbow-mode change-inner counsel fuzzy command-log-mode scratch ox-twbs caps-lock dired+ cheatsheet scratch-message org-bookmark-heading tabbar fastdef dired+ dired-details+ flyspell-lazy crux paredit key-chord web-mode fancy-narrow polymode fountain-mode dired-quick-sort rspec-mode js2))
+  auto-capitalize
+  auto-complete
+  bongo
+  buffer-stack
+  caps-lock
+  change-inner
+  cheatsheet
+  command-log-mode
+  counsel
+  crux
+  cyberpunk-theme
+  dired+
+  dired-details+
+  dired-hacks-utils
+  dired-quick-sort
+  dired-single
+  dired-sort-menu
+  discover-my-major
+  expand-region
+  fancy-narrow
+  fastdef
+  flyspell-lazy
+  fountain-mode
+  frame-cmds
+  frame-restore
+  fuzzy
+  gist
+  graphviz-dot-mode
+  helm
+  helm-cmd-t
+  helm-projectile
+  ido-hacks
+  imenu-list
+  js2
+  key-chord
+  magit
+  markdown-mode
+  maxframe
+  multicolumn
+  multiple-cursors
+  nm
+  notmuch
+  olivetti
+  openwith
+  org-bookmark-heading
+  org-fstree
+  ox-twbs
+  palimpsest
+  paredit
+  peg
+  point-stack
+  polymode
+  popup
+  project-explorer
+  projectile
+  rainbow-mode
+  recentf
+  rspec-mode
+  scratch
+  scratch-message
+  smex
+  solarized-theme
+  stripe-buffer
+  sublime-themes
+  tabbar
+  tiny
+  unfill
+  wc-mode
+  web-mode
+  wrap-region
+  writeroom-mode
+  xah-replace-pairs
+  xml-rpc
+  zenburn-theme
+  zone
+))
 
 
 
@@ -26,8 +101,8 @@ which require an initialization must be listed explicitly in the list."
 (setq jay-excluded-packages
 '(
 
-  ;; "List of packages to exclude." 
-adaptive-wrap 
+  ;; "List of packages to exclude."
+adaptive-wrap
   ))
 
 ;; For each package, define a function jay/init-<package-jay>
