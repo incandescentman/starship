@@ -28,7 +28,7 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-
+tramp
      helm
      ;; spacemacs-ivy
      auto-completion
@@ -538,7 +538,7 @@ layers configuration. You are free to put any user code."
 
 (horizontal-cursor)
 (scroll-bar-mode 1)
-
+(defun package--save-selected-packages (&rest opt) nil)
 
 )
 
