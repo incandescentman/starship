@@ -410,9 +410,10 @@ layers configuration. You are free to put any user code."
   (setq org-bullets-bullet-list '("◉" "◉" "○" "○" "✸" "✸" "✿" "✿")) ; for oddlevelsonly mode
   ;;  (setq org-bullets-bullet-list '("◉" "○" "✸" "✿")) ; for SHOWSTARS:evenodd
 
-  (load "/Users/jay/emacs/emacs-settings/gnugol.el")
-  (use-package gnugol)
-  (use-package reveal-in-finder)
+  ;; (load "/Users/jay/emacs/emacs-settings/gnugol.el")
+  ;; (use-package gnugol)
+
+(use-package reveal-in-finder)
 
   (recenter-top-bottom)
   (setq case-fold-search t)
